@@ -2,6 +2,10 @@
 
 import { useState } from "react";
 import Swal from "sweetalert2";
+import Image from 'next/image';
+import Logo from '@/assets/logo.jpeg'; 
+
+
 
 export default function LandingPage() {
 
@@ -43,6 +47,17 @@ export default function LandingPage() {
     <div className="bg-gray-950 text-white min-h-screen font-sans">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 py-24 px-8 text-center">
+      <div className="flex justify-center mb-6">
+  <Image 
+    src={Logo}
+    alt="Echobyte Concept Logo"
+    width={100} 
+    height={100} 
+    className="object-contain rounded-full" 
+  />
+</div>
+
+
         <h1 className="text-5xl md:text-6xl font-extrabold mb-6">ECHOBYTE CONCEPT</h1>
         <p className="text-xl md:text-2xl max-w-3xl mx-auto">
           We build stunning, high-performing websites & web apps that power businesses, Organizations, schools, and ideas across the globe.
@@ -198,8 +213,11 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="bg-black py-6 text-center text-gray-400">
         
-        <p className="text-sm mt-2">📧 echobyteconcept@gmail.com &nbsp;|&nbsp; 📞 +234 706 348 0314</p>
-        <p>&copy; {new Date().getFullYear()} ECHOBYTE CONCEPT. All rights reserved.</p>
+        <p className="text-sm mt-2">📧 echobyteconcept@gmail.com</p>
+        <p className="text-sm mt-2">📞 +234 706 348 0314</p>
+       
+        <p>&copy; {new Date().getFullYear()} ECHOBYTE CONCEPT.</p>
+        <p>All rights reserved.</p>
       </footer>
     </div>
   );
