@@ -123,7 +123,8 @@ export default function LandingPage() {
               key={i}
               className="bg-gray-800 p-6 rounded-2xl max-w-sm text-left shadow-md"
             >
-              <p className="text-lg italic mb-4">"{testimonial.quote}"</p>
+              <p className="text-lg italic mb-4">&quot;{testimonial.quote}&quot;</p>
+
               <p className="font-semibold text-yellow-400">– {testimonial.name}</p>
             </div>
           ))}
