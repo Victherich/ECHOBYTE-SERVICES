@@ -16,9 +16,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PortfolioBuilder",
-  description: "Create stunning portfolios with ease",
+  title: 'ECHOBYTE SERVICES',
+  description: 'We build stunning websites and web apps across the globe.',
+  icons: {
+    icon: '/favicon.png', // or '/favicon.ico'
+  },
 };
+
 
 export default function RootLayout({
   children,
@@ -27,34 +31,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-     
-
-        {/* Main content of the page */}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <main>{children}</main>
 
+        <CompanyCertificate/>
 
-
-
-<CompanyCertificate/>
-
- {/* WhatsApp Icon */}
- <a 
-      href="https://wa.me/2347063480314" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="fixed bottom-[1%] right-1 w-16 h-16 rounded-full shadow-lg cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
-    >
-      <Image 
-        src={wp} 
-        alt="WhatsApp Logo" 
-        width={50} 
-        height={50} 
-        className="rounded-full" 
-      />
-    </a>
+        {/* WhatsApp Icon */}
+        <a 
+          href="https://wa.me/2347063480314" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="fixed bottom-[1%] right-1 w-16 h-16 rounded-full shadow-lg cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
+        >
+          <Image 
+            src={wp} 
+            alt="WhatsApp Logo" 
+            width={50} 
+            height={50} 
+            className="rounded-full" 
+          />
+        </a>
       </body>
     </html>
   );
