@@ -185,10 +185,12 @@ export default function LandingPage() {
 
       {/* Call to Action */}
       <section className="py-20 bg-indigo-800 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Let’s Build Something Amazing For You.</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">Let&apos;s Build Something Amazing For You.</h2>
+
         <p className="mb-8 text-lg md:text-xl max-w-2xl mx-auto">
-          Whether you're a startup, institution, or enterprise — we're ready to bring your vision to life.
-        </p>
+  Whether you&apos;re a startup, institution, or enterprise — we&apos;re ready to bring your vision to life.
+</p>
+
        
       </section>
 
