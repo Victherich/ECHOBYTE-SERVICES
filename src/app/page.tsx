@@ -4,6 +4,7 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import Image from 'next/image';
 import Logo from '@/assets/logo.jpeg'; 
+import TrustSection from "./components/TrustSection";
 
 
 
@@ -115,7 +116,6 @@ export default function LandingPage() {
         <h2 className="text-4xl font-bold mb-8">Why ECHOBYTE CONCEPT?</h2>
         <div className="max-w-4xl mx-auto text-lg text-gray-300 space-y-6">
           <p>✅ 100% custom-built, responsive, and scalable solutions.</p>
-          <p>✅ Expertise in React, Next.js, Tailwind, Firebase, and more.</p>
           <p>✅ Fast delivery, great communication, and full post-launch support.</p>
         </div>
       </section>
@@ -145,6 +145,9 @@ export default function LandingPage() {
           ))}
         </div>
       </section>
+
+<TrustSection/>
+
 
       {/* Contact Form */}
       <section className="py-20 px-8 bg-gray-900 text-white">
