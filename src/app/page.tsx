@@ -161,6 +161,7 @@ export default function LandingPage() {
             value={form.name}
             onChange={handleChange}
             className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 placeholder-gray-400 text-white"
+          required
           />
           <input
             type="email"
@@ -169,6 +170,8 @@ export default function LandingPage() {
             value={form.email}
             onChange={handleChange}
             className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 placeholder-gray-400 text-white"
+          required
+
           />
           <input
             type="text"
@@ -177,6 +180,7 @@ export default function LandingPage() {
             value={form.phone}
             onChange={handleChange}
             className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 placeholder-gray-400 text-white"
+          required
           />
           <textarea
             name="message"
@@ -185,6 +189,7 @@ export default function LandingPage() {
             value={form.message}
             onChange={handleChange}
             className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 placeholder-gray-400 text-white"
+          required
           ></textarea>
           <button
             type="submit"
