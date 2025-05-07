@@ -120,7 +120,7 @@ const Testimonials: React.FC = () => {
         {testimonials.map((client, index) => (
           <TestimonialCard key={index} $bgImage={client.image}>
             <TestimonialContent>
-              <Message>"{client.message}"</Message>
+              <Message>&quot;{client.message}&quot;</Message>
               <Name>{client.name}</Name>
               <Email>{client.email}</Email>
               <Email>{client.country}</Email>
