@@ -1,59 +1,147 @@
+// 'use client';
 
-// components/CompanyCertificate.tsx
-'use client'
+// import React, { useState } from 'react';
+// import Image from 'next/image';
+// import styled from 'styled-components';
+// import certificateImage from '../../assets/certificate.jpeg';
 
-import React, { useState } from "react";
-import Image from "next/image";
-import certificateImage from '../../assets/certificate.jpeg'; // Your certificate image
+// // Styled Components
+// const Thumbnail = styled.div`
+//   position: fixed;
+//   bottom: 5rem;
+//   right: 0.5rem;
+//   cursor: pointer;
+//   z-index: 50;
+// `;
 
-const CompanyCertificate = () => {
+// const ModalOverlay = styled.div`
+//   position: fixed;
+//   inset: 0;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
+
+// const ModalContainer = styled.div`
+//   background: white;
+//   padding: 1.5rem;
+//   border-radius: 0.75rem;
+//   position: relative;
+// `;
+
+// const CloseButton = styled.button`
+//   position: absolute;
+//   top: 1rem;
+//   right: 1rem;
+//   background: #ef4444;
+//   color: white;
+//   padding: 0.5rem;
+//   border-radius: 9999px;
+//   border: none;
+//   cursor: pointer;
+// `;
+
+// const CompanyCertificate: React.FC = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+
+//   const toggleModal = () => setIsOpen(!isOpen);
+
+//   return (
+//     <>
+//       {/* Floating thumbnail */}
+//       <Thumbnail onClick={toggleModal}>
+//         <Image
+//           src={certificateImage}
+//           alt="Company Registration Certificate"
+//           width={50}
+//           height={50}
+//           style={{ borderRadius: '0.5rem', boxShadow: '0 4px 8px rgba(0,0,0,0.3)' }}
+//         />
+//       </Thumbnail>
+
+//       {/* Modal */}
+//       {isOpen && (
+//         <ModalOverlay onClick={toggleModal}>
+//           <ModalContainer onClick={(e) => e.stopPropagation()}>
+//             <Image
+//               src={certificateImage}
+//               alt="Company Registration Certificate"
+//               width={320}
+//               height={550}
+//               style={{ borderRadius: '0.5rem' }}
+//             />
+//             <CloseButton onClick={toggleModal}>X</CloseButton>
+//           </ModalContainer>
+//         </ModalOverlay>
+//       )}
+//     </>
+//   );
+// };
+
+// export default CompanyCertificate;
+
+'use client';
+
+import React, { useState } from 'react';
+import Image from 'next/image';
+import certificateImage from '../../assets/certificate.jpeg';
+
+const CompanyCertificate: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  // Function to toggle modal
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleModal = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      {/* Thumbnail of the certificate, positioned at the bottom right */}
-      <div className="fixed bottom-20 right-2 cursor-pointer z-50">
+    <>
+      {/* Floating thumbnail */}
+      <div
+        onClick={toggleModal}
+        className="fixed bottom-20 right-2 z-50 cursor-pointer"
+      >
         <Image
           src={certificateImage}
           alt="Company Registration Certificate"
-          width={50} // Small size for the thumbnail
+          width={50}
           height={50}
-          className="rounded-lg shadow-lg"
-          onClick={toggleModal} // Open modal when clicked
+          priority
+          className="rounded-md shadow-lg"
         />
       </div>
 
-      {/* Modal for displaying larger certificate */}
+      {/* Modal */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
-          onClick={toggleModal} // Close modal when clicked outside
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="certificate-modal-title"
+          onClick={toggleModal}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50"
         >
-          <div className="bg-white p-6 rounded-lg">
-            <div className="relative">
-              <Image
-                src={certificateImage}
-                alt="Company Registration Certificate"
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative rounded-xl bg-white p-6 animate-scaleIn"
+          >
+            <h2 id="certificate-modal-title" className="sr-only">
+              Company Registration Certificate
+            </h2>
+            <Image
+              src={certificateImage}
+              alt="Company Registration Certificate"
               width={320}
               height={550}
-                className="rounded-lg"
-              />
-              <button
-                onClick={toggleModal} // Close the modal
-                className="absolute top-4 right-4 bg-red-500 text-white p-2 rounded-full"
-              >
-                X
-              </button>
-            </div>
+              className="max-w-full rounded-md h-auto"
+            />
+            <button
+              aria-label="Close Modal"
+              onClick={toggleModal}
+              className="absolute top-4 right-4 rounded-full bg-red-500 px-2 py-1 text-white font-bold text-lg hover:bg-red-600"
+            >
+              ×
+            </button>
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
