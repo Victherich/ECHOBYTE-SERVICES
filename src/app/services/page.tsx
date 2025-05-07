@@ -42,8 +42,23 @@ const HeroSection = styled.section`
   padding: 100px 30px;
   text-align: center;
   color: white;
-  background: linear-gradient(to bottom, #1f2937, #111827);
+  background-image: url('/techp.jpg'); /* replace with your actual image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* dark overlay for contrast */
+    z-index: -1;
+  }
 `;
+
 
 const HeroTitle = styled.h1`
   font-size: 3rem;
