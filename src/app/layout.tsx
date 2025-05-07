@@ -5,6 +5,7 @@ import wp from '../assets/whatsapplogo.png'
 import Image from "next/image";
 import CompanyCertificate from "./components/CompanyCertificate";
 import Footer from './components/Footer'
+import Menu from "./components/Menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Menu/>
         <main>{children}</main>
         <Footer/>
         <CompanyCertificate/>

@@ -41,8 +41,8 @@ import Link from 'next/link';
 
 const services = [
   { title: 'Web Development Services', link: '/services' },
-  { title: 'Portfolio Builder', link: '/services/portfolio-builder' },
-  { title: 'Digital Store', link: '/services/digital-store' },
+  { title: 'Portfolio Builder', link: '/comingsoon' },
+  { title: 'Digital Store', link: '/comingsoon' },
 ];
 
 const ServicesSection = () => {
@@ -60,7 +60,7 @@ const ServicesSection = () => {
               <div className="h-1 w-16 bg-yellow-400 rounded-full mx-auto mb-4" />
               {/* Styled Explore as a button */}
               <Link href={service.link}>
-                <span className="text-white cursor-pointer inline-block px-6 py-2 mt-4 bg-yellow-400 rounded-full text-center font-semibold transition duration-300 hover:bg-yellow-500 focus:outline-none">
+                <span className="text-black cursor-pointer inline-block px-6 py-1 mt-2 bg-yellow-400 rounded-full text-center font-semibold transition duration-300 hover:bg-yellow-500 focus:outline-none">
                   Explore
                 </span>
               </Link>

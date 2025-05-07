@@ -13,6 +13,8 @@ import {
   FaCalculator,
   FaCalendarAlt
 } from 'react-icons/fa';
+import { FaHandDots } from 'react-icons/fa6';
+import ContactForm from '../components/ContactForm';
 
 // Services Data
 const services = [
@@ -25,6 +27,7 @@ const services = [
   { title: 'Financial Web Apps', icon: <FaChartLine /> },
   { title: 'Accounting Applications', icon: <FaCalculator /> },
   { title: 'Booking Systems', icon: <FaCalendarAlt /> },
+  { title: 'Lots More...', icon: <FaChartLine/> },
 ];
 
 // Styled Components
@@ -34,7 +37,7 @@ const PageWrapper = styled.div`
   background: linear-gradient(135deg, #0f172a, #1e293b);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
 `;
 
 const HeroSection = styled.section`
@@ -123,6 +126,11 @@ const Card = styled.div`
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
 
   &:hover {
     transform: translateY(-10px) scale(1.03);
@@ -165,6 +173,7 @@ const ServicesPage = () => {
           ))}
         </Grid>
       </ServicesSection>
+      <ContactForm />
     </PageWrapper>
   );
 };

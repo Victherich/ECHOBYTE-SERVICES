@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 const menuItems = [
-  { name: '🏠 Home', link: '/' },
-  { name: '📞 Contact us', link: '/contactus' },
+  { name: 'Home', link: '/' },
+  { name: 'Services', link: '/services' },
 ];
 
 const Menu: React.FC = () => {
@@ -38,7 +38,7 @@ const Menu: React.FC = () => {
         onMouseEnter={() => setIsOpen(true)}
         className="bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm px-5 py-1.5 rounded-full shadow-lg cursor-pointer select-none transition-colors duration-300 md:px-2.5"
       >
-        📜 More
+        📜 Menu
       </div>
 
       <ul
