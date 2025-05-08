@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'ECHOBYTE SERVICES',
+  title: 'ECHOBYTE CONCEPT',
   description: 'We build stunning websites and web apps across the globe.',
   icons: {
     icon: '/favicon.png', // or '/favicon.ico'

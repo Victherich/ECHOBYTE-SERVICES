@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 
 import React from 'react';
 import styled from 'styled-components';
@@ -13,7 +13,7 @@ import {
   FaCalculator,
   FaCalendarAlt
 } from 'react-icons/fa';
-import { FaHandDots } from 'react-icons/fa6';
+
 import ContactForm from '../components/ContactForm';
 
 // Services Data
@@ -154,6 +154,7 @@ const ServicesPage = () => {
     <PageWrapper>
       <HeroSection>
         <HeroTitle>Empowering Your Online Presence</HeroTitle>
+     
         <HeroText>
           From sleek business websites to advanced web applications, we craft
           tailored digital experiences that drive results. Explore our wide
@@ -179,3 +180,4 @@ const ServicesPage = () => {
 };
 
 export default ServicesPage;
+

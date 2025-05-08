@@ -35,7 +35,7 @@
 // export default ServicesSection;
 
 
-'use client';
+// 'use client';
 
 import Link from 'next/link';
 

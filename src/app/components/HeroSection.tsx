@@ -86,10 +86,11 @@ const HeroSection = () => {
   We build stunning, high-performing websites & web apps that power businesses, organizations, schools, and ideas across the globe.
 </p>
 
-      <div className="mt-10 flex justify-center flex-wrap gap-6" style={{cursor:"pointer"}}>
+      <div className="mt-10 flex justify-center flex-wrap gap-6" >
         <button
           onClick={scrollToServices}
           className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-lg py-3 px-6 rounded-full transition-colors"
+          style={{cursor:"pointer"}}
         >
           View Our Services
         </button>

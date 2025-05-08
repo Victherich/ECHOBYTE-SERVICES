@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 
 import TrustSection from "./components/TrustSection";
 import HeroSection from "./components/HeroSection";
