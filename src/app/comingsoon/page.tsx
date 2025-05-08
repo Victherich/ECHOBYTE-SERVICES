@@ -4,6 +4,7 @@
 
 
 import React from 'react';
+import Link from 'next/link';
 
 const ComingSoon = () => {
   return (
@@ -16,13 +17,13 @@ const ComingSoon = () => {
         <p className="text-lg text-gray-300 mb-8">
           We’re working hard to bring something amazing to life. Stay tuned!
         </p>
-        <a
+        <Link
         href='/'
             type="submit"
             className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded-full transition-colors"
           >
             Home
-          </a>
+          </Link>
         {/* <form className="flex flex-col sm:flex-row justify-center gap-4">
           <input
             type="email"

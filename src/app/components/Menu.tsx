@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
+
 const menuItems = [
   { name: 'Home', link: '/' },
   { name: 'Services', link: '/services' },
