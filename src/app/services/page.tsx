@@ -15,6 +15,7 @@ import {
 } from 'react-icons/fa';
 
 import ContactForm from '../components/ContactForm';
+import Link from 'next/link';
 
 // Services Data
 const services = [
@@ -175,6 +176,15 @@ const ServicesPage = () => {
         </Grid>
       </ServicesSection>
       <ContactForm />
+   <div className="flex justify-center m-10">
+  <Link
+    href="/"
+    className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded-full transition-colors"
+  >
+    Back Home
+  </Link>
+</div>
+
     </PageWrapper>
   );
 };
