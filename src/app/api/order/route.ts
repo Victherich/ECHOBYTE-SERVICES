@@ -12,6 +12,7 @@ export async function POST(req: Request) {
     amountPaid,
     paidAt,
     sellerEmail,
+    currency
   } = await req.json();
 
   const transporter = nodemailer.createTransport({
@@ -29,7 +30,8 @@ export async function POST(req: Request) {
     html: `
       <h2>New Purchase Notification</h2>
       <p><strong>Product:</strong> ${productName}</p>
-      <p><strong>Amount:</strong> ₦${amountPaid}</p>
+      <p><strong>Amount:</strong> ${amountPaid}</p>
+      <p><strong>Currency:</strong> ${currency}</p>
       <p><strong>Transaction Ref:</strong> ${transactionReference}</p>
       <p><strong>Paid At:</strong> ${paidAt}</p>
       <hr/>
@@ -48,7 +50,8 @@ export async function POST(req: Request) {
       <h2>Thank You for Your Purchase!</h2>
       <p>Hi ${customerName},</p>
       <p>Thank you for purchasing <strong>${productName}</strong>.</p>
-      <p><strong>Amount Paid:</strong> ₦${amountPaid}</p>
+      <p><strong>Amount Paid:</strong> ${amountPaid}</p>
+      <p><strong>Currency:</strong> ${currency}</p>
       <p><strong>Transaction Ref:</strong> ${transactionReference}</p>
       <p>You can access your product here: <a href="${productUrl}">${productUrl}</a></p>
       <p>If you have any questions, feel free to reply to this email.</p>

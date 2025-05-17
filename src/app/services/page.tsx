@@ -67,7 +67,8 @@ const HeroSection = styled.section`
 const HeroTitle = styled.h1`
   font-size: 3rem;
   font-weight: 800;
-  color: #facc15;
+  // color: #facc15;
+  color:white;
   margin-bottom: 20px;
 `;
 
@@ -105,7 +106,7 @@ const ServicesSection = styled.section`
 const Title = styled.h2`
   font-size: 2.5rem;
   font-weight: 700;
-  color: #facc15;
+  color: white;
   margin-bottom: 40px;
   text-align: center;
 `;
@@ -181,7 +182,7 @@ const ServicesPage = () => {
     href="/"
     className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded-full transition-colors"
   >
-    Back Home
+    Back to Home
   </Link>
 </div>
 

@@ -83,7 +83,7 @@ const services = [
   {
     title: 'Web Development Services',
     description:
-      'From beautiful websites to powerful web apps, we build digital solutions that bring your vision to life and grow your online presence.',
+      'We build beautiful and powerful websites and web applications to bring your vision to life and grow your online presence as an individual, organization or business owner.',
     link: '/services',
   },
 
@@ -91,13 +91,13 @@ const services = [
     title: 'Digital Store',
     description:
       'Discover our curated collection of digital products, including eBooks, courses, and templates designed to help you grow and succeed.',
-    link: '/comingsoon',
+    link: 'https://echobytedigitalstore.vercel.app',
   },
   
   {
     title: 'Portfolio Builder',
     description:
-      'Showcase your talent with a sleek, personalized portfolio website — the modern way to get noticed, beyond outdated CVs.',
+      'Showcase your talent with a sleek, personalized portfolio website — the modern way to get noticed. CVs are now outdated!.',
     link: '/comingsoon',
   },
   
