@@ -131,7 +131,7 @@ const HeroSection = () => {
           className="text-4xl md:text-5xl font-extrabold mb-6"
           style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.9)' }}
         >
-          ECHOBYTE CONCEP
+          ECHOBYTE CONCEPT
         </h1>
         <p
           className="text-lg md:text-xl mb-6"
