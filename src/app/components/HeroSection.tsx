@@ -123,15 +123,7 @@ const HeroSection = () => {
       }}
     >
       {/* Top-left logo */}
-      <div className="absolute top-6 left-6">
-        <Image
-          src={logoPath}
-          alt="Echobyte Concept Logo"
-          width={80}
-          height={80}
-          className="object-contain rounded-full"
-        />
-      </div>
+     
 
       {/* Main Content */}
       <div className="text-center max-w-4xl mx-auto">

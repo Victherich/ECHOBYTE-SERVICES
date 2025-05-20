@@ -87,6 +87,13 @@ const services = [
     link: '/services',
   },
 
+   {
+    title: 'Mobile Development Services',
+    description:
+      'We build beautiful and powerful mobile applications to bring your vision to life as an individual, organization or business owner.',
+    link: '/mobileservices',
+  },
+
   {
     title: 'Digital Store',
     description:

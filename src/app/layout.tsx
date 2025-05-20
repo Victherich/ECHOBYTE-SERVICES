@@ -2,10 +2,14 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import wp from '../assets/whatsapplogo.png'
-import Image from "next/image";
+// import Image from "next/image";
 import CompanyCertificate from "./components/CompanyCertificate";
 import Footer from './components/Footer'
 import Menu from "./components/Menu";
+import Image from 'next/image';
+import logo from '../assets/logo.jpeg';
+import Link from "next/link";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +39,26 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Menu/>
+
+      <a href="/">
+        <Image
+          src={logo}
+          alt="Echobyte Concept Logo"
+          width={80}
+          height={80}
+          className="object-contain rounded-full"
+          style={{
+            position:"fixed",
+            top:"10px",
+            left:"10px",
+            zIndex:"2"
+          }}
+
+        />
+        </a>
+  
+      
+
         <main>{children}</main>
         <Footer/>
         <CompanyCertificate/>

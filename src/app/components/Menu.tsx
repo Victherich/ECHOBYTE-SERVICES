@@ -6,7 +6,8 @@ import { useRouter } from 'next/navigation';
 
 const menuItems = [
   { name: 'Home', link: '/' },
-  { name: 'Services', link: '/services' },
+  { name: 'Web Services', link: '/services' },
+  { name: 'Mobile Services', link: '/mobileservices' },
 ];
 
 const Menu: React.FC = () => {
