@@ -11,6 +11,7 @@ import logo from '../assets/logo.jpeg';
 import Link from "next/link";
 
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -40,7 +41,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Menu/>
 
-      <a href="/">
+      <Link href="/">
         <Image
           src={logo}
           alt="Echobyte Concept Logo"
@@ -55,7 +56,7 @@ export default function RootLayout({
           }}
 
         />
-        </a>
+        </Link>
   
       
 
@@ -64,7 +65,7 @@ export default function RootLayout({
         <CompanyCertificate/>
 
         {/* WhatsApp Icon */}
-        <a 
+        <Link 
           href="https://wa.me/2347063480314" 
           target="_blank" 
           rel="noopener noreferrer" 
@@ -77,7 +78,7 @@ export default function RootLayout({
             height={50} 
             className="rounded-full" 
           />
-        </a>
+        </Link>
       </body>
     </html>
   );

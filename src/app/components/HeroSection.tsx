@@ -103,9 +103,9 @@
 
 
 
-import Image from 'next/image';
+// import Image from 'next/image';
 
-const logoPath = '/logo.jpeg';
+// const logoPath = '/logo.jpeg';
 
 const HeroSection = () => {
   const scrollToServices = () => {
