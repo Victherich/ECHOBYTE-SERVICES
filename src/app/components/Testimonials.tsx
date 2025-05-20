@@ -190,7 +190,8 @@ const Testimonials: React.FC = () => {
             style={{ backgroundImage: `url(${client.image})` }}
           >
             <div className="relative z-10 w-[90%] bg-black/50 p-4 rounded-md text-center">
-              <p className="text-sm italic mb-2">"{client.message}"</p>
+             <p className="text-sm italic mb-2">&quot;{client.message}&quot;</p>
+
               <h4 className="text-md font-semibold">{client.name}</h4>
               <p className="text-xs opacity-80">{client.email}</p>
               <p className="text-xs opacity-80">{client.country}</p>
