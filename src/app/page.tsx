@@ -6,6 +6,7 @@ import ServicesSection from "./components/ServicesSection";
 import WhyChooseSection from "./components/WhyChooseSection";
 import ContactForm from "./components/ContactForm";
 import Testimonials from "./components/Testimonials";
+import InternshipAd from "./components/InternshipAd";
 
 
 
@@ -21,6 +22,7 @@ export default function LandingPage() {
       <HeroSection/>
       <ServicesSection/>
       <WhyChooseSection/>
+
       <Testimonials/>
 <TrustSection/>
 <ContactForm/>
@@ -33,6 +35,8 @@ export default function LandingPage() {
   Whether you&apos;re a startup, institution, or enterprise — we&apos;re ready to bring your vision to life.
 </p>
       </section>
+
+      <InternshipAd/>
 
     </div>
   );
