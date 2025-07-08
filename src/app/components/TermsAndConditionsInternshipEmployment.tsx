@@ -1,6 +1,6 @@
 
 import { NextPage } from 'next';
-import Head from 'next/head';
+
 
 const TermsAndConditionsInternshipEmployment: NextPage = () => {
   return (
@@ -13,9 +13,9 @@ const TermsAndConditionsInternshipEmployment: NextPage = () => {
         <div className="max-w-3xl mx-auto space-y-6 text-gray-200">
           <p><strong>Effective Date:</strong> 20/02/2025</p>
 
-          <p>
-            Welcome to <strong>ECHOBYTE CONCEPT</strong> ("we", "us", or "our"). These Terms and Conditions govern your participation in our internship programs and your employment with our company. By accepting an offer of internship or employment, you agree to comply with and be bound by the following Terms and Conditions, in addition to any specific agreements (e.g., Internship Agreement, Employment Contract) that you may sign.
-          </p>
+    <p>
+  Welcome to <strong>ECHOBYTE CONCEPT</strong> (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). These Terms and Conditions govern your participation in our internship programs and your employment with our company. By accepting an offer of internship or employment, you agree to comply with and be bound by the following Terms and Conditions, in addition to any specific agreements (e.g., Internship Agreement, Employment Contract) that you may sign.
+</p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">1. Acceptance of Terms</h2>
           <p>
