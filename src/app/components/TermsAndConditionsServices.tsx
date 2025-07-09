@@ -1,10 +1,11 @@
-
 import { NextPage } from 'next';
-
+// import Head from 'next/head'; // Removed as it was declared but not used
 
 const TermsAndConditionsServices: NextPage = () => {
   return (
     <>
+      {/* <Head> was removed as it was defined but not used. If needed for this page, add it back and populate with <title> and <meta> tags. */}
+
       <section className="bg-[#111827] text-white min-h-screen py-16 px-6 font-sans">
         <h1 className="text-4xl md:text-3xl font-bold text-center text-[#facc15] mb-8" style={{ textDecoration: "underline" }}>
           Services
@@ -14,7 +15,7 @@ const TermsAndConditionsServices: NextPage = () => {
           <p><strong>Effective Date:</strong> 20/02/2025</p>
 
           <p>
-            Welcome to <strong>ECHOBYTE CONCEPT</strong> ("we", "us", or "our"). By accessing or using our services, which include but are not limited to **web development, digital marketing, app development, and all kinds of digital tech services**, you agree to comply with and be bound by the following Terms and Conditions.
+            Welcome to <strong>ECHOBYTE CONCEPT</strong> (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). By accessing or using our services, which include but are not limited to **web development, digital marketing, app development, and all kinds of digital tech services**, you agree to comply with and be bound by the following Terms and Conditions.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">1. Acceptance of Terms</h2>
@@ -99,7 +100,7 @@ const TermsAndConditionsServices: NextPage = () => {
             <li>The effectiveness of digital marketing campaigns, as results can vary due to market conditions, competition, and other external factors.</li>
           </ul>
           <p>
-            **All services are provided "as is" and "as available" without any warranties of any kind, express or implied, except as expressly stated herein.**
+            **All services are provided &quot;as is&quot; and &quot;as available&quot; without any warranties of any kind, express or implied, except as expressly stated herein.**
           </p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">11. Limitation of Liability</h2>
@@ -108,7 +109,7 @@ const TermsAndConditionsServices: NextPage = () => {
           </p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">12. Indemnification</h2>
-          <p>You agree to indemnify, defend, and hold harmless ECHOBYTE CONCEPT, its directors, officers, employees, and agents from and against any and all claims, liabilities, damages, losses, and expenses, including reasonable attorneys' fees and costs, arising out of or in any way connected with your access to or use of our services, your violation of these Terms, or your infringement of any intellectual property or other right of any person or entity.</p>
+          <p>You agree to indemnify, defend, and hold harmless ECHOBYTE CONCEPT, its directors, officers, employees, and agents from and against any and all claims, liabilities, damages, losses, and expenses, including reasonable attorneys&apos; fees and costs, arising out of or in any way connected with your access to or use of our services, your violation of these Terms, or your infringement of any intellectual property or other right of any person or entity.</p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">13. Privacy</h2>
           <p>Your data and privacy are governed by our separate **Privacy Policy**, which is incorporated by reference into these Terms and Conditions. Please review our Privacy Policy to understand our practices regarding your personal information.</p>
@@ -119,7 +120,7 @@ const TermsAndConditionsServices: NextPage = () => {
           </p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">15. Changes to Terms</h2>
-          <p>We may update these Terms and Conditions from time to time. We will notify you of any changes by posting the new Terms on this page and updating the "Effective Date" at the top of these Terms. Your continued use of our services after such modifications will constitute your acknowledgment of the modified Terms and agreement to abide and be bound by the modified Terms.</p>
+          <p>We may update these Terms and Conditions from time to time. We will notify you of any changes by posting the new Terms on this page and updating the &quot;Effective Date&quot; at the top of these Terms. Your continued use of our services after such modifications will constitute your acknowledgment of the modified Terms and agreement to abide and be bound by the modified Terms.</p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">16. Governing Law</h2>
           <p>

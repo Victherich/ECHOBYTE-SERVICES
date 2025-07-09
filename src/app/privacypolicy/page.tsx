@@ -1,4 +1,3 @@
-
 import { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -18,7 +17,7 @@ const PrivacyPolicy: NextPage = () => {
           <p><strong>Effective Date:</strong> 20/02/2025</p>
 
           <p>
-            This Privacy Policy explains how <strong>ECHOBYTE CONCEPT</strong> ("we", "us", or "our") collects, uses, discloses, and safeguards your information when you use our platform to buy or sell digital products.
+            This Privacy Policy explains how <strong>ECHOBYTE CONCEPT</strong> (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) collects, uses, discloses, and safeguards your information when you use our platform to buy or sell digital products.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">1. Information We Collect</h2>
@@ -68,7 +67,7 @@ const PrivacyPolicy: NextPage = () => {
             Our platform may contain links to external sites. We are not responsible for their privacy practices. Review their policies before interacting.
           </p>
 
-          <h2 className="text-2xl font-semibold text-[#facc15] mt-8">8. Children's Privacy</h2>
+          <h2 className="text-2xl font-semibold text-[#facc15] mt-8">8. Children&apos;s Privacy</h2>
           <p>
             Our platform is not intended for users under 13. We do not knowingly collect information from minors.
           </p>

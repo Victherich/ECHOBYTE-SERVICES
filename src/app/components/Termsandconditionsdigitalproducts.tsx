@@ -1,12 +1,8 @@
-
 import { NextPage } from 'next';
-
 
 const TermsAndConditionsDigitalProducts: NextPage = () => {
   return (
     <>
-   
-
       <section className="bg-[#111827] text-white min-h-screen py-16 px-6 font-sans">
         <h1 className="text-4xl md:text-3xl font-bold text-center text-[#facc15] mb-8" style={{textDecoration:"underline"}}>
           Digital Products
@@ -16,12 +12,12 @@ const TermsAndConditionsDigitalProducts: NextPage = () => {
           <p><strong>Effective Date:</strong> 20/02/2025</p>
 
           <p>
-            Welcome to <strong>ECHOBYTE CONCEPT</strong> ("we", "us", or "our"). By accessing or using our platform to buy or sell digital products, you agree to comply with and be bound by the following Terms and Conditions.
+            Welcome to <strong>ECHOBYTE CONCEPT</strong> (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). By accessing or using our platform to buy or sell digital products, you agree to comply with and be bound by the following Terms and Conditions.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">1. Acceptance of Terms</h2>
           <p>
-            By registering, using, or browsing our platform, you agree to these Terms. If you do not agree, please do not use our services.
+            By registering, using, or Browse our platform, you agree to these Terms. If you do not agree, please do not use our services.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">2. Eligibility</h2>
@@ -90,7 +86,7 @@ const TermsAndConditionsDigitalProducts: NextPage = () => {
           </p>
 
           <p className="mt-10 font-semibold text-center text-[#facc15]">
-            Thank you for choosing ECHOBYTE CONCEPT. We’re committed to building a safe and vibrant digital marketplace!
+            Thank you for choosing ECHOBYTE CONCEPT. We&apos;re committed to building a safe and vibrant digital marketplace!
           </p>
         </div>
       </section>

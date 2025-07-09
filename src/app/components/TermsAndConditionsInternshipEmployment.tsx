@@ -1,6 +1,5 @@
-
 import { NextPage } from 'next';
-
+// import Head from 'next/head'; // Removed as it was declared but not used
 
 const TermsAndConditionsInternshipEmployment: NextPage = () => {
   return (
@@ -13,9 +12,9 @@ const TermsAndConditionsInternshipEmployment: NextPage = () => {
         <div className="max-w-3xl mx-auto space-y-6 text-gray-200">
           <p><strong>Effective Date:</strong> 20/02/2025</p>
 
-    <p>
-  Welcome to <strong>ECHOBYTE CONCEPT</strong> (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). These Terms and Conditions govern your participation in our internship programs and your employment with our company. By accepting an offer of internship or employment, you agree to comply with and be bound by the following Terms and Conditions, in addition to any specific agreements (e.g., Internship Agreement, Employment Contract) that you may sign.
-</p>
+          <p>
+            Welcome to <strong>ECHOBYTE CONCEPT</strong> (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). These Terms and Conditions govern your participation in our internship programs and your employment with our company. By accepting an offer of internship or employment, you agree to comply with and be bound by the following Terms and Conditions, in addition to any specific agreements (e.g., Internship Agreement, Employment Contract) that you may sign.
+          </p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">1. Acceptance of Terms</h2>
           <p>
@@ -27,7 +26,7 @@ const TermsAndConditionsInternshipEmployment: NextPage = () => {
             **For Internships:** Internship opportunities are offered to individuals seeking practical experience and learning in relevant digital tech fields. Specific eligibility criteria (e.g., educational background, skills) will be outlined in the internship offer. Interns are not considered employees unless explicitly stated otherwise in a formal employment contract.
           </p>
           <p>
-            **For Employment:** Employment is offered to qualified individuals based on company needs and successful completion of our recruitment process. All employment is "at-will" unless a specific written contract or collective bargaining agreement states otherwise. This means either you or ECHOBYTE CONCEPT may terminate the employment relationship at any time, with or without cause, and with or without notice, subject to applicable laws.
+            **For Employment:** Employment is offered to qualified individuals based on company needs and successful completion of our recruitment process. All employment is &quot;at-will&quot; unless a specific written contract or collective bargaining agreement states otherwise. This means either you or ECHOBYTE CONCEPT may terminate the employment relationship at any time, with or without cause, and with or without notice, subject to applicable laws.
           </p>
           <p>
             All engagements (internship or employment) are subject to verification of credentials, background checks, and adherence to company policies.
@@ -35,7 +34,7 @@ const TermsAndConditionsInternshipEmployment: NextPage = () => {
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">3. Code of Conduct and Company Policies</h2>
           <p>
-            All interns and employees are required to adhere to ECHOBYTE CONCEPT's Code of Conduct, internal policies, procedures, and guidelines, as they may be updated from time to time. These policies cover, but are not limited to, workplace behavior, professionalism, attendance, use of company resources, and data security. You will be provided access to these policies and are expected to familiarize yourself with them.
+            All interns and employees are required to adhere to ECHOBYTE CONCEPT&apos;s Code of Conduct, internal policies, procedures, and guidelines, as they may be updated from time to time. These policies cover, but are not limited to, workplace behavior, professionalism, attendance, use of company resources, and data security. You will be provided access to these policies and are expected to familiarize yourself with them.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">4. Compensation and Benefits</h2>
@@ -48,7 +47,7 @@ const TermsAndConditionsInternshipEmployment: NextPage = () => {
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">5. Confidentiality</h2>
           <p>
-            During your internship or employment, you may have access to ECHOBYTE CONCEPT's confidential and proprietary information, including but not limited to trade secrets, client data, project details, software code, business strategies, and marketing plans. You agree to:
+            During your internship or employment, you may have access to ECHOBYTE CONCEPT&apos;s confidential and proprietary information, including but not limited to trade secrets, client data, project details, software code, business strategies, and marketing plans. You agree to:
           </p>
           <ul className="list-disc pl-5 space-y-1">
             <li>Keep all such information strictly confidential.</li>
@@ -60,7 +59,7 @@ const TermsAndConditionsInternshipEmployment: NextPage = () => {
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">6. Intellectual Property (IP) Rights</h2>
           <p>
-            You agree that all inventions, discoveries, designs, developments, improvements, software, code, processes, and any other intellectual property (collectively, "Inventions") conceived, made, developed, or reduced to practice by you, either alone or jointly with others, during your internship or employment, and that are related to the business or anticipated business of ECHOBYTE CONCEPT, or are developed using ECHOBYTE CONCEPT's resources, time, or facilities, shall be the **sole and exclusive property of ECHOBYTE CONCEPT.**
+            You agree that all inventions, discoveries, designs, developments, improvements, software, code, processes, and any other intellectual property (collectively, &quot;Inventions&quot;) conceived, made, developed, or reduced to practice by you, either alone or jointly with others, during your internship or employment, and that are related to the business or anticipated business of ECHOBYTE CONCEPT, or are developed using ECHOBYTE CONCEPT&apos;s resources, time, or facilities, shall be the **sole and exclusive property of ECHOBYTE CONCEPT.**
           </p>
           <p>
             You agree to:
@@ -77,12 +76,12 @@ const TermsAndConditionsInternshipEmployment: NextPage = () => {
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">7. Non-Compete and Non-Solicitation (Applicable to Employees/Senior Interns, if stipulated)</h2>
           <p>
-            Depending on your role and access to confidential information, you may be required to sign a separate Non-Compete and/or Non-Solicitation Agreement. If applicable, these agreements will specify restrictions on engaging in competitive activities or soliciting ECHOBYTE CONCEPT's clients, employees, or contractors for a defined period after your engagement ends.
+            Depending on your role and access to confidential information, you may be required to sign a separate Non-Compete and/or Non-Solicitation Agreement. If applicable, these agreements will specify restrictions on engaging in competitive activities or soliciting ECHOBYTE CONCEPT&apos;s clients, employees, or contractors for a defined period after your engagement ends.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">8. Data Protection and Privacy</h2>
           <p>
-            You understand that during your engagement, you will handle personal data of clients, employees, and other stakeholders. You agree to comply with ECHOBYTE CONCEPT's data protection policies and all applicable data privacy laws, including the Nigerian Data Protection Regulation (NDPR). Unauthorized access, use, disclosure, or processing of personal data is strictly prohibited. Your personal data provided to us will be processed in accordance with our Privacy Policy.
+            You understand that during your engagement, you will handle personal data of clients, employees, and other stakeholders. You agree to comply with ECHOBYTE CONCEPT&apos;s data protection policies and all applicable data privacy laws, including the Nigerian Data Protection Regulation (NDPR). Unauthorized access, use, disclosure, or processing of personal data is strictly prohibited. Your personal data provided to us will be processed in accordance with our Privacy Policy.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">9. Termination of Engagement</h2>
@@ -90,7 +89,7 @@ const TermsAndConditionsInternshipEmployment: NextPage = () => {
             **For Internships:** Internships are typically for a fixed term. Either party may terminate an internship earlier with reasonable notice, as specified in the internship agreement. ECHOBYTE CONCEPT reserves the right to terminate an internship immediately for serious breaches of these Terms, company policies, or misconduct.
           </p>
           <p>
-            **For Employment:** Employment termination will be in accordance with the terms of your employment contract, ECHOBYTE CONCEPT's policies, and applicable labor laws in Nigeria. This includes provisions for notice periods, garden leave (if applicable), and final payments. ECHOBYTE CONCEPT reserves the right to terminate employment immediately for serious misconduct, gross negligence, or fundamental breach of contract.
+            **For Employment:** Employment termination will be in accordance with the terms of your employment contract, ECHOBYTE CONCEPT&apos;s policies, and applicable labor laws in Nigeria. This includes provisions for notice periods, garden leave (if applicable), and final payments. ECHOBYTE CONCEPT reserves the right to terminate employment immediately for serious misconduct, gross negligence, or fundamental breach of contract.
           </p>
           <p>
             Upon termination of any engagement, you must immediately return all company property, including but not limited to laptops, mobile phones, keys, documents, and any other items belonging to ECHOBYTE CONCEPT.
@@ -102,7 +101,7 @@ const TermsAndConditionsInternshipEmployment: NextPage = () => {
           </p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">11. Indemnification</h2>
-          <p>You agree to indemnify, defend, and hold harmless ECHOBYTE CONCEPT, its directors, officers, employees, and agents from and against any and all claims, liabilities, damages, losses, and expenses, including reasonable attorneys' fees and costs, arising out of or in any way connected with your breach of these Terms, your misconduct, or your gross negligence during your engagement with ECHOBYTE CONCEPT.</p>
+          <p>You agree to indemnify, defend, and hold harmless ECHOBYTE CONCEPT, its directors, officers, employees, and agents from and against any and all claims, liabilities, damages, losses, and expenses, including reasonable attorneys&apos; fees and costs, arising out of or in any way connected with your breach of these Terms, your misconduct, or your gross negligence during your engagement with ECHOBYTE CONCEPT.</p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">12. Severability</h2>
           <p>If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that these Terms will otherwise remain in full force and effect and enforceable.</p>
@@ -118,7 +117,7 @@ const TermsAndConditionsInternshipEmployment: NextPage = () => {
           </p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">15. Changes to Terms</h2>
-          <p>We reserve the right to update these Terms and Conditions from time to time. We will notify you of any material changes by posting the new Terms on this page or through other appropriate communication channels. Your continued internship or employment after such modifications will constitute your acknowledgment of the modified Terms and agreement to abide and be bound by them.</p>
+          <p>We reserve the right to update these Terms and Conditions from time to time. We will notify you of any material changes by posting the new Terms on this page or through other appropriate communication channels. Your continued internship or employment after such modifications will constitute your your acknowledgment of the modified Terms and agreement to abide and be bound by them.</p>
 
           <h2 className="text-2xl font-semibold text-[#facc15] mt-8">16. Contact Us</h2>
           <p>
