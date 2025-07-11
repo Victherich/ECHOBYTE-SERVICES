@@ -6,7 +6,6 @@ import ServicesSection from "./components/ServicesSection";
 import WhyChooseSection from "./components/WhyChooseSection";
 import ContactForm from "./components/ContactForm";
 import Testimonials from "./components/Testimonials";
-import InternshipAd from "./components/InternshipAd";
 import JobAd from './components/JobAd';
 
 
