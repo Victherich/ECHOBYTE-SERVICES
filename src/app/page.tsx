@@ -7,6 +7,7 @@ import WhyChooseSection from "./components/WhyChooseSection";
 import ContactForm from "./components/ContactForm";
 import Testimonials from "./components/Testimonials";
 import InternshipAd from "./components/InternshipAd";
+import JobAd from './components/JobAd';
 
 
 
@@ -36,7 +37,7 @@ export default function LandingPage() {
 </p>
       </section>
 
-      <InternshipAd/>
+     <JobAd/>
 
     </div>
   );

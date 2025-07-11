@@ -98,7 +98,7 @@ const services = [
     title: 'Digital Store',
     description:
       'Discover our curated collection of digital products, including eBooks, courses, and templates designed to help you grow and succeed.',
-    link: 'https://echobytedigitalstore.vercel.app',
+    link: 'https://products.echobyteconcept.com',
   },
   
   {
