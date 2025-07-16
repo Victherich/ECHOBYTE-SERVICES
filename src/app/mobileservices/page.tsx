@@ -29,7 +29,7 @@ const services = [
   { title: 'Backend Integration', icon: <FaDatabase /> },
   { title: 'App Security Services', icon: <FaLock /> },
   { title: 'App Testing & QA', icon: <FaBug /> },
-  { title: 'And Much More...', icon: <FaRocket /> },
+  { title: 'And Lots More...', icon: <FaRocket /> },
 ];
 
 // Styled Components (Same as original)
@@ -153,8 +153,8 @@ const ServicesPage = () => {
       <HeroSection>
         <HeroTitle>Innovative Mobile App Solutions</HeroTitle>
         <HeroText>
-          From native iOS and Android development to cross-platform and backend integration, 
-          we build cutting-edge mobile apps that deliver real results. Discover our mobile-focused services.
+      
+          We build cutting-edge mobile apps that deliver real results. Discover our mobile-focused services.
         </HeroText>
         <CTAButton href="#services">Explore Services</CTAButton>
       </HeroSection>

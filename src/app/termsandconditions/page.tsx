@@ -3,6 +3,7 @@ import Head from 'next/head';
 import TermsAndConditionsDigitalProducts from '../components/Termsandconditionsdigitalproducts';
 import TermsAndConditionsServices from '../components/TermsAndConditionsServices';
 import TermsAndConditionsInternshipEmployment from '../components/TermsAndConditionsInternshipEmployment';
+import ThirdPartyTerms from '../components/ThirdPartyTerms';
 
 
 const TermsAndConditions: NextPage = () => {
@@ -17,7 +18,9 @@ const TermsAndConditions: NextPage = () => {
         </h1>
         <TermsAndConditionsServices/>
 <TermsAndConditionsDigitalProducts/>
+<ThirdPartyTerms/>
 <TermsAndConditionsInternshipEmployment/>
+
       </section>
       
 

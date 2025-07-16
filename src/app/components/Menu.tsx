@@ -8,6 +8,9 @@ const menuItems = [
   { name: 'Home', link: '/' },
   { name: 'Web Services', link: '/services' },
   { name: 'Mobile Services', link: '/mobileservices' },
+  {name:'Our Digital Store', link:'https://products.echobyteconcept.com' },
+  {name:'Make Money with Echobyte', link:'/comingsoon' },
+  {name:'Portfolio builder', link:'/comingsoon' }
 ];
 
 const Menu: React.FC = () => {

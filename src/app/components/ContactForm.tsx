@@ -39,7 +39,7 @@ const ContactForm: React.FC = () => {
   return (
     <section className="bg-gray-900 text-white px-4 py-20">
       <h2 className="text-4xl font-bold text-center mb-10">
-        Get a free Quote / Contact Us
+        Get a free Quote / Contact Us Now
       </h2>
 
       <div className="mx-auto max-w-2xl bg-gray-800 p-8 rounded-2xl shadow-2xl">

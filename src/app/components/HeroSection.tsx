@@ -137,7 +137,7 @@ const HeroSection = () => {
           className="text-lg md:text-xl mb-6"
           style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.9)' }}
         >
-          We help you stand out with powerful websites, digital products, and a modern Portfolio Builder — everything you need to grow your presence and showcase your skills in today’s digital world.
+          We help you stand out with powerful websites, Mobile Apps, Digital products and Services, a Modern Portfolio Builder — everything you need to grow in today’s digital world.
         </p>
       
 

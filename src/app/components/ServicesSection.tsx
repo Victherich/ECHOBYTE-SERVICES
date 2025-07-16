@@ -90,23 +90,32 @@ const services = [
    {
     title: 'Mobile Development Services',
     description:
-      'We build beautiful and powerful mobile applications to bring your vision to life as an individual, organization or business owner.',
+      'We build beautiful and powerful Mobile Apps to bring your vision to life as an individual, organization or business owner.',
     link: '/mobileservices',
   },
 
   {
-    title: 'Digital Store',
+    title: 'Our Digital Store',
     description:
-      'Discover our curated collection of digital products, including eBooks, courses, and templates designed to help you grow and succeed.',
+      'Discover our collection of Digital products, including eBooks, courses, and templates designed to help you grow and succeed.',
     link: 'https://products.echobyteconcept.com',
+  },
+
+     {
+    title: 'Make Money with Echobyte',
+    description:
+      'Register for free and start earning big with our affiliate program!.',
+    link: '/comingsoon',
   },
   
   {
     title: 'Portfolio Builder',
     description:
-      'Showcase your talent with a sleek, personalized portfolio website — the modern way to get noticed. CVs are now outdated!.',
+      'Get your personalized portfolio website and be noticed. CVs are now outdated!.',
     link: '/comingsoon',
   },
+
+
   
 ];
 

@@ -23,12 +23,12 @@ const JobAd: NextPage = () => {
       <div className="max-w-4xl mx-auto text-center">
         {/* Updated heading to mention "Job" */}
         <h2 className="text-3xl md:text-4xl font-bold text-[#ffffff] mb-4">
-          Apply For a Job?
+          Apply For our Jobs?
         </h2>
         {/* Updated paragraph text to reference a job without specifying a role, 
             while retaining the expertise areas. */}
         <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-          Apply for Social Media manager, content creator and digital marketer job, 
+          Apply for our Social Media manager, content creator and digital marketer job, 
      
         </p>
         <button

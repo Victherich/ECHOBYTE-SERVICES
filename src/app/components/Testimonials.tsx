@@ -182,7 +182,7 @@ const Testimonials: React.FC = () => {
         What Our Real Clients Say:
       </h1>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
         {testimonials.map((client, index) => (
           <div
             key={index}
