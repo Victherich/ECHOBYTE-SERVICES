@@ -61,9 +61,9 @@ const AboutUs: NextPage = () => {
           className="rounded-xl shadow-lg mx-auto"
         />
 
-        <h2 className="text-3xl font-bold text-[#facc15]">Let's Build Something Amazing Together! 🛠️</h2>
+        <h2 className="text-3xl font-bold text-[#facc15]">Let us Build Something Amazing Together! 🛠️</h2>
         <p>
-          Whether you're a startup founder, freelancer, small business owner, or simply someone with a vision, <strong>Echobyte Concept</strong> is here to support your journey into the digital frontier.
+          Whether you are a startup founder, freelancer, small business owner, or simply someone with a vision, <strong>Echobyte Concept</strong> is here to support your journey into the digital frontier.
         </p>
 
         <p className="text-center mt-10">
