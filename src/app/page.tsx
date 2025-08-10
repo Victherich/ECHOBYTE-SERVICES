@@ -6,8 +6,7 @@ import ServicesSection from "./components/ServicesSection";
 import WhyChooseSection from "./components/WhyChooseSection";
 import ContactForm from "./components/ContactForm";
 import Testimonials from "./components/Testimonials";
-import JobAd from './components/JobAd';
-import QRCodeDisplay from "./components/QRCodeDisplay";
+
 
 
 
