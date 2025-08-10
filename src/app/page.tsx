@@ -7,6 +7,7 @@ import WhyChooseSection from "./components/WhyChooseSection";
 import ContactForm from "./components/ContactForm";
 import Testimonials from "./components/Testimonials";
 import JobAd from './components/JobAd';
+import QRCodeDisplay from "./components/QRCodeDisplay";
 
 
 
@@ -36,7 +37,9 @@ export default function LandingPage() {
 </p>
       </section>
 
-     <JobAd/>
+     {/* <JobAd/> */}
+
+     {/* <QRCodeDisplay/> */}
 
     </div>
   );

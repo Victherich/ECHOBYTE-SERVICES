@@ -85,6 +85,7 @@ const services = [
     description:
       'We build beautiful and powerful websites and web applications to bring your vision to life and grow your online presence as an individual, organization or business owner.',
     link: '/services',
+    buttonText:"Explore"
   },
 
    {
@@ -92,6 +93,7 @@ const services = [
     description:
       'We build beautiful and powerful Mobile Apps to bring your vision to life as an individual, organization or business owner.',
     link: '/mobileservices',
+    buttonText:"Explore"
   },
 
   {
@@ -99,6 +101,7 @@ const services = [
     description:
       'Discover our collection of Digital products, including eBooks, courses, and templates designed to help you grow and succeed.',
     link: 'https://products.echobyteconcept.com',
+     buttonText:"Explore"
   },
 
      {
@@ -106,6 +109,7 @@ const services = [
     description:
       'Register for free and start earning big with our affiliate program!.',
     link: '/comingsoon',
+     buttonText:"Explore"
   },
   
   {
@@ -113,6 +117,15 @@ const services = [
     description:
       'Get your personalized portfolio website and be noticed. CVs are now outdated!.',
     link: '/comingsoon',
+     buttonText:"Explore"
+  },
+
+      {
+    title: 'Empower your Business with Echobyte Partnership',
+    description:
+      'Register for free and start earning big with our partnership program!.',
+    link: '/comingsoon',
+     buttonText:"Explore"
   },
 
 
@@ -135,7 +148,7 @@ const ServicesSection = () => {
               <p className="text-gray-300 mb-6 text-sm">{service.description}</p>
               <Link href={service.link}>
                 <span className="text-black cursor-pointer inline-block px-6 py-1 bg-yellow-400 rounded-full text-center font-semibold transition duration-300 hover:bg-yellow-500 focus:outline-none">
-                  Explore
+                  {service.buttonText}
                 </span>
               </Link>
             </div>

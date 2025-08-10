@@ -5,12 +5,27 @@ import { useRouter } from 'next/navigation';
 
 
 const menuItems = [
-  { name: 'Home', link: '/' },
+  { name: 'Echobyte Home', link: '/' },
+   {name:'Digital Store Home', link:'https://products.echobyteconcept.com' },
+     {name:'Portfolio Builder', link:'/comingsoon' },
+  {name:'Echobyte Affiliate', link:'/comingsoon' },
+ {name:'Echobyte Partnership', link:'/comingsoon' },
+];
+
+
+
+const menuItems2 = [
+
   { name: 'Web Services', link: '/services' },
   { name: 'Mobile Services', link: '/mobileservices' },
-  {name:'Our Digital Store', link:'https://products.echobyteconcept.com' },
-  {name:'Make Money with Echobyte', link:'/comingsoon' },
-  {name:'Portfolio builder', link:'/comingsoon' },
+
+];
+
+
+
+const menuItems3 = [
+
+
   { name: 'About Echobyte', link: '/aboutus' },
 ];
 
@@ -34,6 +49,16 @@ const Menu: React.FC = () => {
     };
   }, []);
 
+
+
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setIsOpen(true);
+  }, 20000);
+  return () => clearInterval(interval);
+}, []);
+
+
   return (
     <div
       id="menu-container"
@@ -48,10 +73,11 @@ const Menu: React.FC = () => {
       </div>
 
       <ul
-        className={`absolute right-0 top-12 w-48 bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-out ${
+        className={`absolute right-0 top-12 w-48 bg-gray-100 rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-out ${
           isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
         }`}
       >
+        <p style={{fontWeight:"bold", paddingLeft:"5px", paddingTop:"20px", textDecoration:"underline", fontSize:"0.8rem"}}>HOME PAGES</p>
         {menuItems.map((item, index) => (
           <li
             key={index}
@@ -59,12 +85,42 @@ const Menu: React.FC = () => {
               setIsOpen(false);
               router.push(item.link);
             }}
-            className="px-4 py-3 text-sm font-medium text-gray-800 hover:bg-gray-200 cursor-pointer flex items-center gap-2"
+            className="px-4 py-1 text-sm font-medium text-blue-900 hover:bg-gray-200 cursor-pointer flex items-center gap-2"
+          >
+            {item.name}
+          </li>
+        ))}
+<p style={{fontWeight:"bold", paddingLeft:"5px", paddingTop:"20px", textDecoration:"underline", fontSize:"0.8rem"}}>SERVICES</p>
+         {menuItems2.map((item, index) => (
+          <li
+            key={index}
+            onClick={() => {
+              setIsOpen(false);
+              router.push(item.link);
+            }}
+            className="px-4 py-1 text-sm font-medium text-blue-900 hover:bg-gray-200 cursor-pointer flex items-center gap-2"
+          >
+            {item.name}
+          </li>
+        ))}
+
+        <p style={{fontWeight:"bold", paddingLeft:"5px", paddingTop:"20px", textDecoration:"underline", fontSize:"0.8rem"}}>OTHER</p>
+         {menuItems3.map((item, index) => (
+          <li
+            key={index}
+            onClick={() => {
+              setIsOpen(false);
+              router.push(item.link);
+            }}
+            className="px-4 py-2 text-sm font-medium text-blue-900 hover:bg-gray-200 cursor-pointer flex items-center gap-2"
           >
             {item.name}
           </li>
         ))}
       </ul>
+
+
+
     </div>
   );
 };
