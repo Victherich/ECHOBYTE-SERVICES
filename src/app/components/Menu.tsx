@@ -77,7 +77,7 @@ const Menu: React.FC = () => {
           isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
         }`}
       >
-        <p style={{fontWeight:"bold", paddingLeft:"5px", paddingTop:"20px", textDecoration:"underline", fontSize:"0.8rem"}}>HOME PAGES</p>
+        <p style={{fontWeight:"bold", paddingLeft:"5px", paddingTop:"20px", textDecoration:"underline", fontSize:"0.8rem", color:"#222"}}>HOME PAGES</p>
         {menuItems.map((item, index) => (
           <li
             key={index}
@@ -90,7 +90,7 @@ const Menu: React.FC = () => {
             {item.name}
           </li>
         ))}
-<p style={{fontWeight:"bold", paddingLeft:"5px", paddingTop:"20px", textDecoration:"underline", fontSize:"0.8rem"}}>SERVICES</p>
+<p style={{fontWeight:"bold", paddingLeft:"5px", paddingTop:"20px", textDecoration:"underline", fontSize:"0.8rem", color:"#222" }}>SERVICES</p>
          {menuItems2.map((item, index) => (
           <li
             key={index}
@@ -104,7 +104,7 @@ const Menu: React.FC = () => {
           </li>
         ))}
 
-        <p style={{fontWeight:"bold", paddingLeft:"5px", paddingTop:"20px", textDecoration:"underline", fontSize:"0.8rem"}}>OTHER</p>
+        <p style={{fontWeight:"bold", paddingLeft:"5px", paddingTop:"20px", textDecoration:"underline", fontSize:"0.8rem", color:"#222"}}>OTHER</p>
          {menuItems3.map((item, index) => (
           <li
             key={index}
