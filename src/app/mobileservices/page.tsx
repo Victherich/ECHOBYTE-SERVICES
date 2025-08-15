@@ -35,7 +35,7 @@ const services = [
 // Styled Components (Same as original)
 const PageWrapper = styled.div`
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  // background: linear-gradient(135deg, #0f172a, #1e293b);
   display: flex;
   flex-direction: column;
 `;
@@ -149,7 +149,7 @@ const ServiceTitle = styled.h3`
 
 const ServicesPage = () => {
   return (
-    <PageWrapper>
+    <PageWrapper className='bg-gray-950'>
       <HeroSection>
         <HeroTitle>Innovative Mobile App Solutions</HeroTitle>
         <HeroText>

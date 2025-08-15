@@ -35,7 +35,7 @@ const services = [
 
 const PageWrapper = styled.div`
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  // background: linear-gradient(135deg, #0f172a, #1e293b);
   display: flex;
   flex-direction: column;
   // align-items: center;
@@ -153,7 +153,7 @@ const ServiceTitle = styled.h3`
 
 const ServicesPage = () => {
   return (
-    <PageWrapper>
+    <PageWrapper className='bg-gray-950'>
       <HeroSection>
         <HeroTitle>Empowering Your Online Presence</HeroTitle>
      

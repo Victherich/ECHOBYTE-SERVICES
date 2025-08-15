@@ -27,6 +27,7 @@ const menuItems3 = [
 
 
   { name: 'About Echobyte', link: '/aboutus' },
+  { name: 'Our Clients / Partners', link: '/ourclients' },
 ];
 
 const Menu: React.FC = () => {
@@ -54,7 +55,7 @@ const Menu: React.FC = () => {
   useEffect(() => {
   const interval = setInterval(() => {
     setIsOpen(true);
-  }, 20000);
+  },1*60*1000);
   return () => clearInterval(interval);
 }, []);
 

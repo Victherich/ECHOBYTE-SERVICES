@@ -6,11 +6,15 @@ import ServicesSection from "./components/ServicesSection";
 import WhyChooseSection from "./components/WhyChooseSection";
 import ContactForm from "./components/ContactForm";
 import Testimonials from "./components/Testimonials";
+import ProjectsMilestoneBadge from "./components/ProjectsMilestoneBadge";
+// import { useRouter } from "next/router";
 
 
 
 
 export default function LandingPage() {
+
+  // const router = useRouter();
 
 
 
@@ -26,6 +30,11 @@ export default function LandingPage() {
       <Testimonials/>
 <TrustSection/>
 <ContactForm/>
+<ProjectsMilestoneBadge/>
+
+ {/* <h2 className="text-3xl sm:text-3xl font-bold text-center text-white mb-4" onClick={()=>router.push('/ourclients')}>
+          Meet our <span className="text-yellow-400">Clients...</span>
+        </h2> */}
 
       {/* Call to Action */}
       <section className="py-20 bg-indigo-800 text-center">

@@ -1,53 +1,9 @@
-// 'use client';
-
-// import Image from 'next/image';
-
-// const logoPath = '/logo.jpeg';
-
-// const HeroSection = () => {
-//   const scrollToServices = () => {
-//     const servicesSection = document.getElementById("services");
-//     servicesSection?.scrollIntoView({ behavior: "smooth" });
-//   };
-
-//   return (
-//     <section className="bg-gradient-to-r from-indigo-700 via-purple-800 to-pink-700 py-24 px-8 text-center">
-//       <div className="flex justify-center mb-6">
-//         <Image
-//           src={logoPath}
-//           alt="Echobyte Concept Logo"
-//           width={100}
-//           height={100}
-//           className="object-contain rounded-full"
-//         />
-//       </div>
-//       <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-white">
-//         ECHOBYTE CONCEPT
-//       </h1>
-//       <p className="text-lg md:text-xl max-w-4xl mx-auto text-white">
-//         We build stunning, high-performing websites & web apps that power businesses, organizations, schools, and ideas across the globe.
-//       </p>
-//       <div className="mt-10 flex justify-center flex-wrap gap-6">
-//         <button
-//           onClick={scrollToServices}
-//           className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-lg py-3 px-6 rounded-full transition-colors"
-//         >
-//           View Our Services
-//         </button>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default HeroSection;
 
 
 
-// 'use client';
+// // import Image from 'next/image';
 
-// import Image from 'next/image';
-
-// const logoPath = '/logo.jpeg';
+// // const logoPath = '/logo.jpeg';
 
 // const HeroSection = () => {
 //   const scrollToServices = () => {
@@ -57,43 +13,41 @@
 
 //   return (
 //     <section
-//       className="py-24 px-8 text-center"
+//       className="py-40 px-8 text-white relative"
 //       style={{
-//         backgroundImage: "url('/echohero2.jpg')", // Replace with your background image URL
-//         backgroundSize: "cover", // Ensures the image covers the full section
-//         backgroundPosition: "center", // Centers the image within the section
+//         backgroundImage: "url('/echohero2.jpg')",
+//         backgroundSize: "cover",
+//         backgroundPosition: "center",
 //       }}
 //     >
-//       <div className="flex justify-start align-start mb-6">
-//         <Image
-//           src={logoPath}
-//           alt="Echobyte Concept Logo"
-//           width={100}
-//           height={100}
-//           className="object-contain rounded-full"
-//         />
-//       </div>
-//       <h1 
-//   className="text-4xl md:text-5xl font-extrabold mb-6 text-white"
-//   style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.9)'}}
-// >
-//   ECHOBYTE CONCEPT
-// </h1>
-// <p 
-//   className="text-lg md:text-xl max-w-4xl mx-auto text-white"
-//   style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.9)' }}
-// >
-//   We build stunning, high-performing websites & web apps that power businesses, organizations, schools, and ideas across the globe.
-// </p>
+//       {/* Top-left logo */}
+     
 
-//       <div className="mt-10 flex justify-center flex-wrap gap-6" >
-//         <button
-//           onClick={scrollToServices}
-//           className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-lg py-3 px-6 rounded-full transition-colors"
-//           style={{cursor:"pointer"}}
+//       {/* Main Content */}
+//       <div className="text-center max-w-4xl mx-auto">
+//         <h1
+//           className="text-4xl md:text-5xl font-extrabold mb-6"
+//           style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.9)' }}
 //         >
-//           View Our Services
-//         </button>
+//           ECHOBYTE CONCEPT
+//         </h1>
+//         <p
+//           className="text-lg md:text-xl mb-6"
+//           style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.9)' }}
+//         >
+//           We help you stand out with powerful websites, Mobile Apps, Digital products and Services, a Modern Portfolio Builder — everything you need to grow in today’s digital world.
+//         </p>
+      
+
+//         <div className="mt-10 flex justify-center flex-wrap gap-6">
+//           <button
+//             onClick={scrollToServices}
+//             className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-lg py-3 px-6 rounded-full transition-colors"
+//             style={{ cursor: "pointer" }}
+//           >
+//             View Our Services
+//           </button>
+//         </div>
 //       </div>
 //     </section>
 //   );
@@ -103,56 +57,70 @@
 
 
 
-// import Image from 'next/image';
 
-// const logoPath = '/logo.jpeg';
+import React from 'react';
 
 const HeroSection = () => {
+  // A function to handle smooth scrolling to the services section.
   const scrollToServices = () => {
     const servicesSection = document.getElementById("services");
-    servicesSection?.scrollIntoView({ behavior: "smooth" });
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <section
-      className="py-40 px-8 text-white relative"
-      style={{
-        backgroundImage: "url('/echohero2.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      {/* Top-left logo */}
-     
-
-      {/* Main Content */}
-      <div className="text-center max-w-4xl mx-auto">
+    // The main section container. It's relative so we can place an overlay inside.
+    <section className="relative min-h-screen flex items-center justify-center text-white p-4 sm:p-8">
+      {/* Background Image Container with Overlay */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{
+          // Use your actual image path here.
+          backgroundImage: "url('/echohero2.jpg')",
+          // A semi-transparent dark overlay to make text more readable.
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundBlendMode: 'multiply'
+        }}
+      />
+      
+      {/* Main content, placed above the background image layer. */}
+      <div className="relative z-10 text-center max-w-4xl mx-auto">
+        {/* Main heading with a large, bold font. */}
         <h1
-          className="text-4xl md:text-5xl font-extrabold mb-6"
+          className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-4"
           style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.9)' }}
         >
-          ECHOBYTE CONCEPT
+          ECHOBYTE <span className="text-yellow-400">CONCEPT</span>
         </h1>
+        
+        {/* Subheading text with improved styling. */}
         <p
-          className="text-lg md:text-xl mb-6"
+          className="text-lg sm:text-xl md:text-2xl text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto"
           style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.9)' }}
         >
           We help you stand out with powerful websites, Mobile Apps, Digital products and Services, a Modern Portfolio Builder — everything you need to grow in today’s digital world.
         </p>
-      
 
-        <div className="mt-10 flex justify-center flex-wrap gap-6">
+        {/* Call-to-action buttons */}
+        <div className="mt-12 flex justify-center flex-wrap gap-6">
           <button
             onClick={scrollToServices}
-            className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-lg py-3 px-6 rounded-full transition-colors"
-            style={{ cursor: "pointer" }}
+            className="inline-block bg-yellow-400 text-gray-900 font-semibold text-lg py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50"
           >
             View Our Services
           </button>
+          {/* <a
+            onClick={scrollToServices} // Replace with your actual contact page link
+            className="inline-block bg-transparent border-2 border-yellow-400 text-yellow-400 font-semibold text-lg py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:bg-yellow-400 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50"
+          >
+            Contact Us
+          </a> */}
         </div>
       </div>
     </section>
   );
 };
 
-export default HeroSection;
+export default HeroSection
+
