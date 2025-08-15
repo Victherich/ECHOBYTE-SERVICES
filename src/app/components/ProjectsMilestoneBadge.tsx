@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 // This component is a celebratory badge to highlight a milestone.
@@ -12,7 +11,7 @@ const ProjectsMilestoneBadge = () => {
             Celebrating a Major Milestone
           </h3>
           <p className="text-gray-400 text-lg sm:text-xl font-medium mb-6">
-            Within our first year, we're proud to have successfully delivered...
+            Within our first year, we&apos;re proud to have successfully delivered...
           </p>
           
           {/* The main celebratory number with a custom, large font size. */}
@@ -34,4 +33,4 @@ const ProjectsMilestoneBadge = () => {
   );
 };
 
-export default ProjectsMilestoneBadge
+export default ProjectsMilestoneBadge;

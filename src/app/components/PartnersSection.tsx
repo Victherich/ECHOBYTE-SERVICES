@@ -1,17 +1,10 @@
-
 import React from 'react';
 
 // An array of partner objects with names and placeholder image URLs.
 const partners = [
- 
   { name: 'Partner Two', logo: './pp2.png' },
-   { name: 'Partner One', logo: './pp1.png' },
+  { name: 'Partner One', logo: './pp1.png' },
   { name: 'Partner Three', logo: './pp3.jpeg' },
-//   { name: 'Partner Four', logo: 'https://placehold.co/150x75/2d3748/e2e8f0?text=Partner+4' },
-//   { name: 'Partner Five', logo: 'https://placehold.co/150x75/2d3748/e2e8f0?text=Partner+5' },
-//   { name: 'Partner Six', logo: 'https://placehold.co/150x75/2d3748/e2e8f0?text=Partner+6' },
-//   { name: 'Partner Seven', logo: 'https://placehold.co/150x75/2d3748/e2e8f0?text=Partner+7' },
-//   { name: 'Partner Eight', logo: 'https://placehold.co/150x75/2d3748/e2e8f0?text=Partner+8' },
 ];
 
 // This component displays the logos of your business partners.
@@ -30,7 +23,7 @@ const PartnersSection = () => {
         </p>
 
        {/* Responsive grid for partner logos */}
-     <div className="flex flex-wrap justify-center items-center gap-6">
+      <div className="flex flex-wrap justify-center items-center gap-6">
   {partners.map((partner, index) => (
     <div
       key={index}
@@ -50,4 +43,4 @@ const PartnersSection = () => {
   );
 };
 
-export default PartnersSection
+export default PartnersSection;

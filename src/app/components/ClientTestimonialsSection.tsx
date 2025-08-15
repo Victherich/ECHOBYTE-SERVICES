@@ -1,3 +1,13 @@
+//   {
+//     quote: "The digital products from Echobyte Concept's store have been invaluable to our strategy. The quality is top-notch and the results are undeniable.",
+//     name: "Ivert",
+//     email: "Ivertking@gmail.com",
+//     country: "Cameroon",
+//     position: "Cheif Chef at Kfc Dubai",
+//     image: "./" // Placeholder image for Alice Johnson
+//   },
+
+
 import React from 'react';
 
 // An array of testimonial objects. You can replace this with your real data.
@@ -20,14 +30,7 @@ const testimonials = [
     position: "CEO at KWASIKING",
     image: "./Kingsley.jpeg" // Placeholder image for Jane Smith
   },
-//   {
-//     quote: "The digital products from Echobyte Concept's store have been invaluable to our strategy. The quality is top-notch and the results are undeniable.",
-//     name: "Ivert",
-//     email: "Ivertking@gmail.com",
-//     country: "Cameroon",
-//     position: "Cheif Chef at Kfc Dubai",
-//     image: "./" // Placeholder image for Alice Johnson
-//   },
+
     {
     quote: "Absolutely the best service, keep it up guys.",
     name: "Blessing Okereke",
@@ -66,7 +69,7 @@ const ClientTestimonialsSection = () => {
         </h2>
         {/* Subheading */}
         <p className="text-lg text-gray-400 text-center mb-16 max-w-2xl mx-auto">
-          Hear from the amazing individuals and businesses we've had the pleasure of working with. Their success is our success.
+          Hear from the amazing individuals and businesses we&apos;ve had the pleasure of working with. Their success is our success.
         </p>
 
         {/* This grid will automatically adjust based on screen size. */}
@@ -86,7 +89,7 @@ const ClientTestimonialsSection = () => {
                 
                 {/* Testimonial quote with a subtle quote icon */}
                 <div className="flex justify-between items-start mb-4">
-                  <p className="text-gray-300 text-lg italic leading-relaxed">"{testimonial.quote}"</p>
+                  <p className="text-gray-300 text-lg italic leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
                   <svg className="w-8 h-8 text-yellow-400 ml-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5a5.4 5.4 0 015.4-5.4c1.87 0 3.6 0.95 4.6 2.5a5.4 5.4 0 014.6-2.5c2.97 0 5.4 2.43 5.4 5.4 0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                   </svg>
@@ -107,4 +110,4 @@ const ClientTestimonialsSection = () => {
   );
 };
 
-export default ClientTestimonialsSection
+export default ClientTestimonialsSection;
