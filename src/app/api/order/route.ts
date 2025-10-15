@@ -7,7 +7,6 @@ export async function POST(req: Request) {
     customerEmail,
     customerPhone,
     productName,
-    productUrl,
     transactionReference,
     amountPaid,
     paidAt,
