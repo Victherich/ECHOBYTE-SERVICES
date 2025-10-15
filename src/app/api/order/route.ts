@@ -56,7 +56,6 @@ export async function POST(req: Request) {
       <p><strong>Amount Paid:</strong> ${amountPaid}</p>
       <p><strong>Currency:</strong> ${currency}</p>
       <p><strong>Transaction Ref:</strong> ${transactionReference}</p>
-      <p>You can access your product here: <a href="${productUrl}">${productUrl}</a></p>
       <p>If you have any questions, feel free to reply to this email.</p>
       <br/>
       <p>– Echobyte Concept Team</p>
