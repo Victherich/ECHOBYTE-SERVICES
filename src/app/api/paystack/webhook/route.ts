@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { db } from "@/lib/firebase"; // make sure this path matches your firebaseConfig file
+import { db } from "@/lib/firebase"; // adjust if needed
 import { collection, addDoc } from "firebase/firestore";
 import crypto from "crypto";
 
 /**
  * Paystack Webhook Handler (TypeScript)
- * Verifies the signature and stores event data in Firestore
+ * Verifies signature and saves event data to Firestore
  */
 export async function POST(req: NextRequest) {
   try {
@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
 
     // ✅ Verify signature using your Paystack secret key
     const hash = crypto
-      .createHmac("sha512", process.env.PAYSTACK_SECRET_KEY as string)
+      .createHmac("sha512", process.env.PAYSTACK_SECRET_KEY ?? "")
       .update(rawBody)
       .digest("hex");
 
@@ -38,10 +38,14 @@ export async function POST(req: NextRequest) {
     });
 
     return NextResponse.json({ status: "success" }, { status: 200 });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Paystack Webhook Error:", error);
+
+    const message =
+      error instanceof Error ? error.message : "Unknown error occurred";
+
     return NextResponse.json(
-      { error: "Webhook processing failed", details: error.message },
+      { error: "Webhook processing failed", details: message },
       { status: 500 }
     );
   }
