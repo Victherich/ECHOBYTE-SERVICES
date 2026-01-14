@@ -179,7 +179,7 @@ const Testimonials: React.FC = () => {
   return (
     <div className="w-full mt-12 px-4 py-8">
       <h1 className="text-center text-white font-bold text-4xl mb-8">
-        What Our Real Clients Say:
+        What Our Clients Say:
       </h1>
 
       <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-3">

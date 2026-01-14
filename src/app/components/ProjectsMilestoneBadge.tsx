@@ -6,7 +6,7 @@ const ProjectsMilestoneBadge = () => {
     <section className="bg-gray-950 py-16 px-4 sm:px-8">
       <div className="max-w-4xl mx-auto text-center">
         {/* The main badge container. */}
-        <div className="bg-gradient-to-br from-gray-800 to-gray-700 border-4 border-yellow-400 p-8 sm:p-12 rounded-3xl shadow-2xl transition-all duration-300 transform hover:scale-105">
+        <div className=" from-gray-800 to-gray-700 border-4 border-yellow-400 p-8 sm:p-12 rounded-3xl shadow-2xl transition-all duration-300 transform hover:scale-105">
           <h3 className="text-white text-3xl sm:text-4xl font-bold mb-4">
             Celebrating a Major Milestone
           </h3>

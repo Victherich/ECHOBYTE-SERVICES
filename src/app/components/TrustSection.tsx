@@ -14,9 +14,9 @@ const TrustSection: React.FC = () => {
           <div className="flex items-center justify-center">
             <span className="text-4xl mr-4 animate-pulse" role="img" aria-label="shield">🛡️</span>
             <div>
-              <h3 className="text-2xl font-semibold">No Payment Until You Approve!</h3>
+              {/* <h3 className="text-2xl font-semibold">No Payment Until You Approve!</h3> */}
               <p className="text-xl mt-2">
-                With our services, you don’t have to worry about paying upfront. Only pay once you are completely satisfied with the final product.
+                With our services, you don’t have to worry about trust because your satisfaction is our priority.
               </p>
             </div>
           </div>

@@ -59,6 +59,7 @@
 
 
 import React from 'react';
+import Image from 'next/image';
 
 const HeroSection = () => {
   // A function to handle smooth scrolling to the services section.
@@ -87,6 +88,17 @@ const HeroSection = () => {
       {/* Main content, placed above the background image layer. */}
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         {/* Main heading with a large, bold font. */}
+<div className="relative mx-auto mb-6 w-30 h-30 sm:w-30 sm:h-30 md:w-30 md:h-30">
+  <Image
+    src="/logo.jpeg"
+    alt="Echobyte Logo"
+    fill
+    priority
+    className="object-contain rounded-full drop-shadow-xl"
+  />
+</div>
+
+
         <h1
           className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-4"
           style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.9)' }}
@@ -96,7 +108,7 @@ const HeroSection = () => {
         
         {/* Subheading text with improved styling. */}
         <p
-          className="text-lg sm:text-xl md:text-2xl text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto"
+          className=" text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto"
           style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.9)' }}
         >
           We help you stand out with powerful websites, Mobile Apps, Digital products and Services, a Modern Portfolio Builder — everything you need to grow in today’s digital world.

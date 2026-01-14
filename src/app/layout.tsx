@@ -130,7 +130,7 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <Menu />
 
-          <Link href="/">
+          {/* <Link href="/">
             <Image
               src={logo}
               alt="Echobyte Concept Logo"
@@ -144,7 +144,7 @@ export default function RootLayout({
                 zIndex: "2",
               }}
             />
-          </Link>
+          </Link> */}
 
           <main>{children}</main>
           <Footer />
