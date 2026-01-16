@@ -14,7 +14,7 @@ const OurClients = () => {
         <ClientTestimonialsSection/>
         
         <ProjectsSection/>
-        <PartnersSection/>
+        {/* <PartnersSection/> */}
         
     </div>
   )

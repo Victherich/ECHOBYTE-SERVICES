@@ -78,9 +78,9 @@ const HeroSection = () => {
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{
           // Use your actual image path here.
-          backgroundImage: "url('/echohero2.jpg')",
+          backgroundImage: "url('/h1.png')",
           // A semi-transparent dark overlay to make text more readable.
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundColor: 'rgba(0, 0, 0, 0.1)',
           backgroundBlendMode: 'multiply'
         }}
       />
@@ -103,7 +103,9 @@ const HeroSection = () => {
           className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-4"
           style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.9)' }}
         >
-          ECHOBYTE <span className="text-yellow-400">CONCEPT</span>
+          ECHOBYTE <span className="text-blue-400"
+          
+          >CONCEPT</span>
         </h1>
         
         {/* Subheading text with improved styling. */}
@@ -118,7 +120,8 @@ const HeroSection = () => {
         <div className="mt-12 flex justify-center flex-wrap gap-6">
           <button
             onClick={scrollToServices}
-            className="inline-block bg-yellow-400 text-gray-900 font-semibold text-lg py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50"
+            className="inline-block bg-yellow-400 text-gray-900 font-semibold text-lg py-2 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50"
+          style={{background:"gray",color:"white",fontSize:"0.9rem",cursor:"pointer"}}
           >
             View Our Services
           </button>

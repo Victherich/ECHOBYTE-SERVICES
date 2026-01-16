@@ -178,7 +178,9 @@ useEffect(() => {
 
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-gray-900 border-b border-gray-800 shadow-[0_4px_20px_0_rgba(0,0,255,0.6)]">
+    <header className="fixed top-0 left-0 w-full z-50 bg-gray-900 border-b border-gray-900 
+   
+    ">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
 

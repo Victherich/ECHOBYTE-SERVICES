@@ -1,3 +1,199 @@
+// 'use client';
+
+// import React from 'react';
+// import styled from 'styled-components';
+// import {
+//   FaCode,
+//   FaGlobe,
+//   FaShoppingCart,
+//   FaUniversity,
+//   FaSchool,
+//   FaBook,
+//   FaChartLine,
+//   FaCalculator,
+//   FaCalendarAlt
+// } from 'react-icons/fa';
+
+// import ContactForm from '../components/ContactForm';
+// import Link from 'next/link';
+
+// // Services Data
+// const services = [
+//   { title: 'Website Design & Development', icon: <FaCode /> },
+//   { title: 'Business Websites', icon: <FaGlobe /> },
+//   { title: 'E-Commerce Platforms', icon: <FaShoppingCart /> },
+//   { title: 'School & University Portals', icon: <FaUniversity /> },
+//   { title: 'Online Academies', icon: <FaSchool /> },
+//   { title: 'Academic Journals', icon: <FaBook /> },
+//   { title: 'Financial Web Apps', icon: <FaChartLine /> },
+//   { title: 'Accounting Applications', icon: <FaCalculator /> },
+//   { title: 'Booking Systems', icon: <FaCalendarAlt /> },
+//   { title: 'Lots More...', icon: <FaChartLine/> },
+// ];
+
+// // Styled Components
+
+// const PageWrapper = styled.div`
+//   min-height: 100vh;
+//   // background: linear-gradient(135deg, #0f172a, #1e293b);
+//   display: flex;
+//   flex-direction: column;
+//   // align-items: center;
+// `;
+
+// const HeroSection = styled.section`
+//   width: 100%;
+//   padding: 100px 30px;
+//   text-align: center;
+//   color: white;
+//   background-image: url('/techp.jpg'); /* replace with your actual image path */
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   position: relative;
+//   z-index: 1;
+
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     top: 0; left: 0;
+//     width: 100%; height: 100%;
+//     background-color: rgba(0, 0, 0, 0.6); /* dark overlay for contrast */
+//     z-index: -1;
+//   }
+// `;
+
+
+// const HeroTitle = styled.h1`
+//   font-size: 3rem;
+//   font-weight: 800;
+//   // color: #facc15;
+//   color:white;
+//   margin-bottom: 20px;
+// `;
+
+// const HeroText = styled.p`
+//   font-size: 1.2rem;
+//   max-width: 700px;
+//   margin: 0 auto 30px;
+//   color: #d1d5db;
+// `;
+
+// const CTAButton = styled.a`
+//   display: inline-block;
+//   background-color: #facc15;
+//   color: #111827;
+//   padding: 12px 30px;
+//   border-radius: 999px;
+//   font-weight: bold;
+//   font-size: 1rem;
+//   text-decoration: none;
+//   transition: background-color 0.3s ease;
+
+//   &:hover {
+//     background-color: #eab308;
+//   }
+// `;
+
+// const ServicesSection = styled.section`
+//   padding: 80px 30px;
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// `;
+
+// const Title = styled.h2`
+//   font-size: 2.5rem;
+//   font-weight: 700;
+//   color: white;
+//   margin-bottom: 40px;
+//   text-align: center;
+// `;
+
+// const Grid = styled.div`
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+//   gap: 30px;
+//   width: 100%;
+//   max-width: 1200px;
+// `;
+
+// const Card = styled.div`
+//   background: linear-gradient(135deg, #1e293b, #334155);
+//   border-radius: 16px;
+//   padding: 30px 20px;
+//   color: white;
+//   text-align: center;
+//   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+//   transition: transform 0.3s ease, box-shadow 0.3s ease;
+//   cursor: pointer;
+//   display:flex;
+//   flex-direction:column;
+//   justify-content:center;
+//   align-items:center;
+
+
+//   &:hover {
+//     transform: translateY(-10px) scale(1.03);
+//     box-shadow: 0 12px 30px rgba(250, 204, 21, 0.2);
+//   }
+// `;
+
+// const IconWrapper = styled.div`
+//   font-size: 3rem;
+//   color: #facc15;
+//   margin-bottom: 15px;
+// `;
+
+// const ServiceTitle = styled.h3`
+//   font-size: 1.25rem;
+//   font-weight: 600;
+// `;
+
+// const ServicesPage = () => {
+//   return (
+//     <PageWrapper className='bg-gray-950'>
+//       <HeroSection>
+//         <HeroTitle>Empowering Your Online Presence</HeroTitle>
+     
+//         <HeroText>
+//           From sleek business websites to advanced web applications, we craft
+//           tailored digital experiences that drive results. Explore our wide
+//           range of professional web development services.
+//         </HeroText>
+//         <CTAButton href="#services">View Services</CTAButton>
+//       </HeroSection>
+
+//       <ServicesSection id="services">
+//         <Title>Our Web Development Services</Title>
+//         <Grid>
+//           {services.map((service, index) => (
+//             <Card key={index}>
+//               <IconWrapper>{service.icon}</IconWrapper>
+//               <ServiceTitle>{service.title}</ServiceTitle>
+//             </Card>
+//           ))}
+//         </Grid>
+//       </ServicesSection>
+//       <ContactForm />
+//    <div className="flex justify-center m-10">
+//   <Link
+//     href="/"
+//     className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded-full transition-colors"
+//   >
+//     Back to Home
+//   </Link>
+// </div>
+
+//     </PageWrapper>
+//   );
+// };
+
+// export default ServicesPage;
+
+
+
 'use client';
 
 import React from 'react';
@@ -11,7 +207,7 @@ import {
   FaBook,
   FaChartLine,
   FaCalculator,
-  FaCalendarAlt
+  FaCalendarAlt,
 } from 'react-icons/fa';
 
 import ContactForm from '../components/ContactForm';
@@ -28,47 +224,46 @@ const services = [
   { title: 'Financial Web Apps', icon: <FaChartLine /> },
   { title: 'Accounting Applications', icon: <FaCalculator /> },
   { title: 'Booking Systems', icon: <FaCalendarAlt /> },
-  { title: 'Lots More...', icon: <FaChartLine/> },
+  { title: 'Lots More...', icon: <FaChartLine /> },
 ];
 
-// Styled Components
+/* =========================
+   Styled Components (Light)
+========================= */
 
 const PageWrapper = styled.div`
   min-height: 100vh;
-  // background: linear-gradient(135deg, #0f172a, #1e293b);
+  background: #f9fafb;
   display: flex;
   flex-direction: column;
-  // align-items: center;
 `;
 
 const HeroSection = styled.section`
   width: 100%;
-  padding: 100px 30px;
+  padding: 110px 30px;
   text-align: center;
-  color: white;
-  background-image: url('/techp.jpg'); /* replace with your actual image path */
+  background-image: url('/techp.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   position: relative;
-  z-index: 1;
 
   &::before {
     content: '';
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* dark overlay for contrast */
-    z-index: -1;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.6);
   }
 `;
 
+const HeroContent = styled.div`
+  position: relative;
+  z-index: 1;
+`;
 
 const HeroTitle = styled.h1`
   font-size: 3rem;
   font-weight: 800;
-  // color: #facc15;
-  color:white;
+  color: #111827;
   margin-bottom: 20px;
 `;
 
@@ -76,27 +271,30 @@ const HeroText = styled.p`
   font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto 30px;
-  color: #d1d5db;
+  // color: #374151;
+  color:rgba(0,0,0,1);
 `;
 
 const CTAButton = styled.a`
   display: inline-block;
-  background-color: #facc15;
-  color: #111827;
-  padding: 12px 30px;
+  // background-color: #facc15;
+  background-color:gray;
+  // color: #111827;
+  color:white;
+  padding: 12px 34px;
   border-radius: 999px;
   font-weight: bold;
-  font-size: 1rem;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 
   &:hover {
-    background-color: #eab308;
+    background-color: rgb(96, 165, 250);
+    transform: translateY(-2px);
   }
 `;
 
 const ServicesSection = styled.section`
-  padding: 80px 30px;
+  padding: 90px 30px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -104,67 +302,73 @@ const ServicesSection = styled.section`
 `;
 
 const Title = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  color: white;
-  margin-bottom: 40px;
+  color: #111827;
+  margin-bottom: 50px;
   text-align: center;
 `;
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  gap: 32px;
   width: 100%;
   max-width: 1200px;
 `;
 
 const Card = styled.div`
-  background: linear-gradient(135deg, #1e293b, #334155);
-  border-radius: 16px;
-  padding: 30px 20px;
-  color: white;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 34px 22px;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
   cursor: pointer;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 12px 30px rgba(250, 204, 21, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(250, 204, 21, 0.25);
   }
 `;
 
 const IconWrapper = styled.div`
   font-size: 3rem;
   color: #facc15;
-  margin-bottom: 15px;
+   color:rgb(96, 165, 250);
+  margin-bottom: 16px;
 `;
 
 const ServiceTitle = styled.h3`
   font-size: 1.25rem;
   font-weight: 600;
+  color: #111827;
 `;
+
+/* =========================
+   Component
+========================= */
 
 const ServicesPage = () => {
   return (
-    <PageWrapper className='bg-gray-950'>
+    <PageWrapper>
+      {/* Hero */}
       <HeroSection>
-        <HeroTitle>Empowering Your Online Presence</HeroTitle>
-     
-        <HeroText>
-          From sleek business websites to advanced web applications, we craft
-          tailored digital experiences that drive results. Explore our wide
-          range of professional web development services.
-        </HeroText>
-        <CTAButton href="#services">View Services</CTAButton>
+        <HeroContent>
+          <HeroTitle>Empowering Your Online Presence</HeroTitle>
+          <HeroText>
+            From sleek business websites to advanced web applications, we craft
+            tailored digital experiences that drive results. Explore our wide
+            range of professional web development services.
+          </HeroText>
+          <CTAButton href="#services">View Services</CTAButton>
+        </HeroContent>
       </HeroSection>
 
+      {/* Services */}
       <ServicesSection id="services">
         <Title>Our Web Development Services</Title>
         <Grid>
@@ -176,19 +380,21 @@ const ServicesPage = () => {
           ))}
         </Grid>
       </ServicesSection>
-      <ContactForm />
-   <div className="flex justify-center m-10">
-  <Link
-    href="/"
-    className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded-full transition-colors"
-  >
-    Back to Home
-  </Link>
-</div>
 
+      {/* Contact */}
+      <ContactForm />
+
+      {/* Back Home */}
+      {/* <div className="flex justify-center my-14">
+        <Link
+          href="/"
+          className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-8 py-3 rounded-full transition-all"
+        >
+          Back to Home
+        </Link>
+      </div> */}
     </PageWrapper>
   );
 };
 
 export default ServicesPage;
-

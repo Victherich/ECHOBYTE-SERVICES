@@ -4,9 +4,9 @@ import React from 'react';
 
 const WhyChooseSection: React.FC = () => {
   return (
-    <section className=" from-gray-800 to-gray-900 py-20 px-6 text-center">
-      <h2 className="text-3xl font-bold text-white mb-8">Why Choose ECHOBYTE CONCEPT?</h2>
-      <div className="max-w-5xl mx-auto text-lg text-gray-300 space-y-6">
+    <section className=" from-gray-100 to-gray-900 py-20 px-6 text-center" style={{background:"#a9c8e27e"}}>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose ECHOBYTE CONCEPT?</h2>
+      <div className="max-w-5xl mx-auto text-lg text-gray-900 space-y-6">
         <p className="mb-6">✅ 100% custom-built, responsive, and scalable solutions.</p>
         <p className="mb-6">✅ Fast delivery, great communication, and full post-launch support.</p>
         <p className="mb-6">

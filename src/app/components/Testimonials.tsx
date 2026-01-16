@@ -177,10 +177,10 @@ const testimonials: Testimonial[] = [
 
 const Testimonials: React.FC = () => {
   return (
-    <div className="w-full mt-12 px-4 py-8">
-      <h1 className="text-center text-white font-bold text-4xl mb-8">
+    <div className="w-full px-4 py-20" style={{background:"#e4ecf3"}}>
+       <h2 className="text-gray-900 text-4xl font-bold text-center mb-16 tracking-tight">
         What Our Clients Say:
-      </h1>
+      </h2>
 
       <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
         {testimonials.map((client, index) => (

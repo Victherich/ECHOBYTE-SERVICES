@@ -20,19 +20,21 @@ const ClientsHeroSection = () => {
       {/* Main content, placed above the background image layer. */}
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-4">
-          Our Valued Clients & <span className="text-yellow-400">Partners</span>
+          Our Valued Clients 
+           {/* <span className="text-yellow-400">Partners</span> */}
         </h1>
         
         <div className="h-2 w-24 bg-yellow-400 rounded-full mx-auto mb-8" />
         
-        <p className="text-lg sm:text-xl md:text-2xl text-gray-300 font-medium leading-relaxed">
-          Celebrating the successful partnerships and powerful stories that have shaped our journey. We are proud to work with visionary clients and innovative partners to bring great ideas to life.
+        <p className=" text-gray-300 font-medium leading-relaxed">
+          Celebrating the successful and powerful stories that have shaped our journey. We are proud to work with visionary clients and to bring great ideas to life.
         </p>
 
         <div className="mt-12">
           <a
             href="#testimonials"
             className="inline-block bg-yellow-400 text-gray-900 font-semibold text-lg py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50"
+          style={{background:"gray", color:"white"}}
           >
             See Our Success Stories
           </a>
