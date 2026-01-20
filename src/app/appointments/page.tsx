@@ -253,9 +253,6 @@
 //     </div>
 //   );
 // }
-
-
-
 'use client';
 
 import { useState } from 'react';
@@ -309,7 +306,15 @@ export default function BulkAppointments() {
   ]);
   const [loading, setLoading] = useState(false);
 
-  const updateBatch = (index: number, key: keyof Batch, value: string) => {
+  /* =======================
+     BATCH HELPERS
+  ======================= */
+
+  const updateBatch = (
+    index: number,
+    key: keyof Batch,
+    value: string
+  ) => {
     const copy = [...batches];
     copy[index][key] = value;
     setBatches(copy);
@@ -319,16 +324,39 @@ export default function BulkAppointments() {
     setBatches([...batches, { calendarId: '', jsonText: '' }]);
   };
 
+  const removeBatch = (index: number) => {
+    const copy = [...batches];
+    copy.splice(index, 1);
+    setBatches(copy.length ? copy : [{ calendarId: '', jsonText: '' }]);
+  };
+
+  const clearBatch = (index: number) => {
+    updateBatch(index, 'calendarId', '');
+    updateBatch(index, 'jsonText', '');
+  };
+
+  /* =======================
+     SUBMIT
+  ======================= */
+
   const submit = async () => {
     const allAppointments: FinalAppointment[] = [];
 
     try {
       batches.forEach((batch, batchIndex) => {
         if (!batch.calendarId) {
-          throw new Error(`Select calendar for Batch ${batchIndex + 1}`);
+          throw new Error(
+            `Please select a calendar for Batch ${batchIndex + 1}`
+          );
         }
 
-        const parsed = JSON.parse(batch.jsonText) as AppointmentInput[];
+        if (!batch.jsonText.trim()) {
+          throw new Error(`Batch ${batchIndex + 1} is empty`);
+        }
+
+        const parsed = JSON.parse(
+          batch.jsonText
+        ) as AppointmentInput[];
 
         if (!Array.isArray(parsed)) {
           throw new Error(`Batch ${batchIndex + 1} must be an array`);
@@ -347,12 +375,15 @@ export default function BulkAppointments() {
       Swal.fire({
         icon: 'error',
         title: 'Invalid Input',
-        text: err instanceof Error ? err.message : 'Invalid JSON',
+        text:
+          err instanceof Error
+            ? err.message
+            : 'Invalid JSON format',
       });
       return;
     }
 
-    if (allAppointments.length === 0) {
+    if (!allAppointments.length) {
       Swal.fire('No appointments to process');
       return;
     }
@@ -387,14 +418,47 @@ ${JSON.stringify(data.results, null, 2)}
     }
   };
 
+  /* =======================
+     UI
+  ======================= */
+
   return (
-    <div className="max-w-5xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6">Bulk Appointment Creator</h1>
+    <div className="max-w-5xl mx-auto p-6 bg-gray-100">
+      <h1 className="text-3xl font-bold mb-6">
+        Bulk Appointment Creator
+      </h1>
 
       {batches.map((batch, index) => (
-        <div key={index} className="border p-4 mb-6 rounded">
+        <div
+          key={index}
+          className="border rounded-lg p-4 mb-6 bg-white shadow-sm"
+        >
+          <div className="flex justify-between items-center mb-3">
+            <h2 className="font-semibold text-lg">
+              Batch {index + 1}
+            </h2>
+
+            <div className="flex gap-3 text-sm">
+              {batches.length > 1 && (
+                <button
+                  onClick={() => removeBatch(index)}
+                  className="text-red-500"
+                >
+                  Remove
+                </button>
+              )}
+
+              <button
+                onClick={() => clearBatch(index)}
+                className="text-blue-500"
+              >
+                Clear
+              </button>
+            </div>
+          </div>
+
           <select
-            className="w-full border p-2 mb-3"
+            className="w-full border p-2 rounded mb-3"
             value={batch.calendarId}
             onChange={e =>
               updateBatch(index, 'calendarId', e.target.value)
@@ -410,27 +474,27 @@ ${JSON.stringify(data.results, null, 2)}
 
           <textarea
             rows={10}
-            className="w-full border p-3 font-mono text-sm"
+            className="w-full p-3 border rounded font-mono text-sm"
+            placeholder="Paste JSON array here"
             value={batch.jsonText}
             onChange={e =>
               updateBatch(index, 'jsonText', e.target.value)
             }
-            placeholder="Paste JSON array here"
           />
         </div>
       ))}
 
       <button
         onClick={addBatch}
-        className="bg-gray-200 px-4 py-2 rounded mr-4"
+        className="mb-6 bg-gray-200 px-4 py-2 rounded"
       >
-        + Add Batch
+        + Add Another Batch
       </button>
 
       <button
         onClick={submit}
         disabled={loading}
-        className="bg-black text-white px-6 py-3 rounded"
+        className="bg-black text-white px-6 py-3 rounded disabled:opacity-50"
       >
         {loading ? 'Processing...' : 'Create Appointments'}
       </button>
