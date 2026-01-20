@@ -97,7 +97,7 @@ import CompanyCertificate from "./components/CompanyCertificate";
 import Footer from "./components/Footer";
 import Menu from "./components/Menu";
 import Image from "next/image";
-import logo from "../assets/logo.jpeg";
+
 import Link from "next/link";
 import StyledComponentsRegistry from "./registry"; // ✅ Import the registry
 
