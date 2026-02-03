@@ -13,6 +13,8 @@ const quickLinks = [
   { name: 'Digital Store', href: 'https://products.echobyteconcept.com' },
   { name: 'Portfolio Builder', href: '/comingsoon' },
   { name: 'Academic Portal', href: '/comingsoon' },
+  { name: 'Affiliate', href: '/comingsoon' },
+  { name: 'Partnership', href: '/comingsoon' },
 ];
 
 const Footer: React.FC = () => {
@@ -32,7 +34,7 @@ const Footer: React.FC = () => {
             <span className="text-white font-semibold text-xl">ECHOBYTE</span>
           </div>
           <p className="text-gray-400 text-sm">
-            We build scalable, AI-powered digital solutions that help businesses,
+            We build scalable web, mobile and AI-powered digital solutions that help businesses,
             professionals, and organizations work better, grow faster, and
             compete confidently in the digital economy.
           </p>

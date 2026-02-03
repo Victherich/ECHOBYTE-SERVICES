@@ -257,6 +257,7 @@
 
 import { useState } from 'react';
 import Swal from 'sweetalert2';
+import AppointmentSlots from '../components/AppointmentSlots';
 
 /* ==================================================
    TYPES
@@ -502,6 +503,8 @@ return (
     >
       {loading ? 'Processing...' : 'Create Appointments'}
     </button>
+
+    <AppointmentSlots/>
   </div>
 );
 

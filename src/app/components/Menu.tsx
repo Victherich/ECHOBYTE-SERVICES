@@ -154,6 +154,10 @@ const moreNav = [
   { name: 'Partnership', href: '/comingsoon' },
 ];
 
+const isExternal = (url: string) =>
+  url.startsWith('http://') || url.startsWith('https://');
+
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
@@ -227,16 +231,23 @@ useEffect(() => {
 
               {moreOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-gray-800 border border-gray-700 rounded-md shadow-lg">
-                  {moreNav.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      onClick={() => setMoreOpen(false)}
-                      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+                 {moreNav.map((item) => {
+  const external = isExternal(item.href);
+
+  return (
+    <Link
+      key={item.name}
+      href={item.href}
+      onClick={() => setMoreOpen(false)}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+    >
+      {item.name}
+    </Link>
+  );
+})}
+
                 </div>
               )}
             </div>
@@ -282,16 +293,23 @@ useEffect(() => {
 
             {moreOpen && (
               <div className="pl-4 border-l border-gray-700" ref={moreRef}>
-                {moreNav.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="block py-2 text-sm text-gray-400 hover:text-white"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+               {moreNav.map((item) => {
+  const external = isExternal(item.href);
+
+  return (
+    <Link
+      key={item.name}
+      href={item.href}
+      onClick={() => setMoreOpen(false)}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+    >
+      {item.name}
+    </Link>
+  );
+})}
+
               </div>
             )}
 

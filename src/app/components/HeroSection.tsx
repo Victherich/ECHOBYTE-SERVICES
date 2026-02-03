@@ -80,7 +80,7 @@ const HeroSection = () => {
           // Use your actual image path here.
           backgroundImage: "url('/h1.png')",
           // A semi-transparent dark overlay to make text more readable.
-          backgroundColor: 'rgba(0, 0, 0, 0.1)',
+          backgroundColor: 'rgba(0, 0, 0, 0.2)',
           backgroundBlendMode: 'multiply'
         }}
       />
@@ -111,17 +111,20 @@ const HeroSection = () => {
         {/* Subheading text with improved styling. */}
         <p
           className=" text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto"
-          style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.9)' }}
+          style={{ textShadow: '2px 2px 5px rgb(0, 0, 0)' }}
         >
-          We help you stand out with powerful websites, Mobile Apps, Digital products and Services, a Modern Portfolio Builder — everything you need to grow in today’s digital world.
-        </p>
+         
+          We Build Websites, Mobile Applications, AI-powered and automated digital platforms that help businesses, professionals, and organizations improve productivity, visibility, and growth in the digital economy.
+          
+          
+             </p>
 
         {/* Call-to-action buttons */}
         <div className="mt-12 flex justify-center flex-wrap gap-6">
           <button
             onClick={scrollToServices}
             className="inline-block bg-yellow-400 text-gray-900 font-semibold text-lg py-2 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50"
-          style={{background:"gray",color:"white",fontSize:"0.9rem",cursor:"pointer"}}
+          style={{background:"gray",color:"white",fontSize:"0.9rem",cursor:"pointer", border:'4px solid white'}}
           >
             View Our Services
           </button>

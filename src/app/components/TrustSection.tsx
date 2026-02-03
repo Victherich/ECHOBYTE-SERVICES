@@ -30,6 +30,7 @@
 
 // export default TrustSection;
 import React from 'react';
+import { FaShieldAlt } from 'react-icons/fa';
 
 const TrustSection: React.FC = () => {
   return (
@@ -53,14 +54,17 @@ const TrustSection: React.FC = () => {
           
           {/* Big Shield */}
           <div className="flex justify-center mb-8">
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-yellow-400/20 flex items-center justify-center shadow-inner">
-              <span
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-blue-400/20 flex items-center justify-center shadow-inner">
+              {/* <span
                 className="text-6xl md:text-7xl"
                 role="img"
                 aria-label="shield"
               >
                 🛡️
-              </span>
+              </span> */}
+              <span className="text-6xl md:text-7xl" role="img" aria-label="shield">
+  <FaShieldAlt />
+</span>
             </div>
           </div>
 

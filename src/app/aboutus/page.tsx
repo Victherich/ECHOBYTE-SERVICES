@@ -119,8 +119,8 @@ const AboutUs: NextPage = () => {
             <strong className="text-gray-900">Echobyte Concept</strong> is a creative
             digital agency with a passion for building cutting-edge solutions that
             transform ideas into real-world success. From sleek websites 🖥️ and
-            intuitive mobile apps 📱 to curated digital products 🎓 and
-            revenue-generating platforms 💰 — we do it all.
+            intuitive mobile apps 📱 to curated digital products 🎓,
+            revenue-generating platforms 💰, AI-powered, and automated digital solutions — we do it all.
           </p>
         </section>
 
@@ -152,8 +152,12 @@ const AboutUs: NextPage = () => {
             <li><strong className="text-gray-900">Mobile App Development:</strong> Beautiful, user-friendly mobile apps.</li>
             <li><strong className="text-gray-900">Digital Products Store:</strong> eBooks, templates, courses, and tools.</li>
             <li><strong className="text-gray-900">Affiliate Program:</strong> Earn by referring others — zero investment.</li>
+            <li><strong className="text-gray-900">Partnerships:</strong> Partner with us and build your brand.</li>
+           
             <li><strong className="text-gray-900">Portfolio Builder:</strong> Replace your CV with a modern personal website.</li>
-          </ul>
+         <li><strong className="text-gray-900">Custom Solutions:</strong> We build digital solutions tailored to your specific needs.</li>
+          
+         </ul>
         </section>
 
         <section>

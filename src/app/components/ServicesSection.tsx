@@ -100,7 +100,7 @@ import Image from 'next/image';
 
 const services = [
   {
-    title: 'Web Development Services',
+    title: 'Web Development',
     description:
       'We build beautiful and powerful websites and web applications to bring your vision to life and grow your online presence.',
     link: '/services',
@@ -108,7 +108,7 @@ const services = [
     image: '/s1.png',
   },
   {
-    title: 'Mobile Development Services',
+    title: 'Mobile App Development',
     description:
       'We build high-quality mobile applications for Android and iOS platforms.',
     link: '/mobileservices',
@@ -126,7 +126,7 @@ const services = [
   {
     title: 'Portfolio Builder',
     description:
-      'Get a modern personal portfolio website that helps you stand out professionally.',
+      'Get a modern personal portfolio website that helps you stand out professionally; instead of the static manual CVs.',
     link: '/comingsoon',
     buttonText: 'Explore',
     image: '/s4.png',
@@ -134,7 +134,7 @@ const services = [
   {
     title: 'Academic Portal',
     description:
-      'A smart academic portal for students and institutions to manage courses, results, resources, and communication.',
+      'A smart and automated academic portal for students and institutions to run and manage all academic activities, exams, lectures, payments etc.',
     link: '/comingsoon',
     buttonText: 'Explore',
     image: '/s5.png',
@@ -167,7 +167,7 @@ const ServicesSection = () => {
 
   {/* Content Positioned at Bottom */}
   <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
-    <h3 className="text-white text-lg font-semibold" style={{fontSize:"2rem"}}>{service.title}</h3>
+    <h3 className="text-white text-lg font-semibold" style={{fontSize:"1.5rem"}}>{service.title}</h3>
     <p className="text-gray-200 text-sm mb-2">{service.description}</p>
    <a
   href={service.link}
