@@ -348,7 +348,7 @@ export default function BulkAppointments() {
       batches.forEach((batch, batchIndex) => {
         if (!batch.calendarId) {
           throw new Error(
-            `Please select a calendar for Batch ${batchIndex + 1}`
+            `Please select a calendar for Batch a ${batchIndex + 1}`
           );
         }
 
