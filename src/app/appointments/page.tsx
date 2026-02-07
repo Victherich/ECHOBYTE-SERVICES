@@ -258,7 +258,7 @@
 import { useState } from 'react';
 import Swal from 'sweetalert2';
 import AppointmentSlots from '../components/AppointmentSlots';
-import AppointmentCounts from '../components/AppointmentCounts';
+
 
 /* ==================================================
    TYPES

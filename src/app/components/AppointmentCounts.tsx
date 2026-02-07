@@ -34,10 +34,15 @@ function buildCopyText(
 
 
 
+interface Appointment {
+  startTime: string;
+}
+
 interface Props {
   date: string;
-  appointments: any[];
+  appointments: Appointment[];
 }
+
 
 export default function AppointmentCounts({ date, appointments }: Props) {
   const { dayOfWeek, formattedDate, buckets } = useMemo(() => {
