@@ -121,9 +121,9 @@ const services = [
 
 const products = [
   {
-    title: 'Our Digital Store',
+    title: 'Courses',
     description:
-      'Discover our collection of digital products including eBooks, courses, and templates.',
+      'Discover our collection of courses for your Advancements',
     link: 'https://products.echobyteconcept.com',
     buttonText: 'Explore',
     image: '/s3.png',
