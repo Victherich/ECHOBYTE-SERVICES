@@ -25,6 +25,7 @@ export default function LandingPage() {
     <div className="bg-white text-white min-h-screen font-sans">
       <HeroSection/>
       <ServicesSection/>
+      {/* <ContactForm/> */}
       <WhyChooseSection/>
 
       <Testimonials/>

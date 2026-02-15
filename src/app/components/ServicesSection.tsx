@@ -97,6 +97,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import ContactForm from './ContactForm';
 
 const services = [
   {
@@ -115,6 +116,10 @@ const services = [
     buttonText: 'Explore',
     image: '/s2.png',
   },
+ 
+];
+
+const products = [
   {
     title: 'Our Digital Store',
     description:
@@ -144,12 +149,66 @@ const services = [
 const ServicesSection = () => {
   return (
     <section id="services" className=" px-6 py-20" style={{background:"#e4ecf3"}}>
-      <h2 className="text-gray-900 text-4xl font-bold text-center mb-16 tracking-tight">
-        Our Services and Digital Products
+      <h2 className="text-gray-900 text-4xl font-bold text-center mb-8 tracking-tight">
+        Our Services
       </h2>
 
-      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 place-items-center">
+      <div className="mb-16" style={{borderBottom:"4px solid lightblue",
+        //  paddingBottom:"80px",
+         display:"flex",
+         justifyContent:"space-around",
+         flexWrap:"wrap",
+         gap:"40px"
+         }}>
          {services.map((service, index) => (
+      <div key={index} className="cursor-pointer w-full max-w-[550px]">
+    <div className=" relative h-[250px] rounded-2xl overflow-hidden border border-gray-700 shadow-lg transition-all duration-300 transform hover:scale-105 hover:border-yellow-400 hover:shadow-yellow-200/20">
+  
+  {/* Background Image */}
+  <Image
+    src={service.image}
+    alt={service.title}
+    fill
+    unoptimized
+    className="object-cover"
+  />
+
+  {/* Slight Dark Overlay */}
+  <div className="absolute inset-0 bg-black/60" />
+
+  {/* Content Positioned at Bottom */}
+  <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
+    <h3 className="text-white text-lg font-semibold" style={{fontSize:"1.5rem"}}>{service.title}</h3>
+    <p className="text-gray-200 text-sm mb-2">{service.description}</p>
+   <a
+  href={service.link}
+  target={service.link.startsWith('http') ? '_blank' : '_self'}
+  rel={service.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+  className="inline-block px-6 py-1 rounded-full font-semibold transition hover:bg-yellow-500"
+  style={{ background: 'gray', color: 'white', fontSize: '0.9rem' }}
+>
+  {service.buttonText}
+</a>
+  </div>
+</div>
+
+      </div>
+    ))}
+
+
+
+     
+<ContactForm/>
+
+
+      </div>
+
+ <h2 className="text-gray-900 text-4xl font-bold text-center mb-8 tracking-tight">
+        Our Products
+      </h2>
+
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 place-items-center">
+         {products.map((service, index) => (
       <div key={index} className="cursor-pointer w-full max-w-[360px]">
     <div className=" relative h-[250px] rounded-2xl overflow-hidden border border-gray-700 shadow-lg transition-all duration-300 transform hover:scale-105 hover:border-yellow-400 hover:shadow-yellow-200/20">
   
@@ -183,9 +242,14 @@ const ServicesSection = () => {
 
       </div>
     ))}
+
+
+
+     
+
+
+
       </div>
-
-
 
     </section>
   );

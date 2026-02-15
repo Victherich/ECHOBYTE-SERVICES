@@ -153,7 +153,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <section className="bg-gray-50 text-gray-900 px-4 py-20" style={{background:"#e4ecf3"}}>
-      <h2 className="text-4xl font-bold text-center mb-10">
+      <h2 className="text-4xl font-bold text-center mb-0">
         Get a free Quote / Contact Us Now
       </h2>
 
@@ -161,7 +161,7 @@ const ContactForm: React.FC = () => {
       style={{background:"#e4ecf3"}}
       >
         <form onSubmit={handleSubmit}>
-          <div className="mb-6">
+          <div className="mb-1">
             <input
               type="text"
               name="name"
@@ -173,7 +173,7 @@ const ContactForm: React.FC = () => {
             />
           </div>
 
-          <div className="mb-6">
+          <div className="mb-1">
             <input
               type="email"
               name="email"
@@ -185,7 +185,7 @@ const ContactForm: React.FC = () => {
             />
           </div>
 
-          <div className="mb-6">
+          <div className="mb-1">
             <input
               type="text"
               name="phone"
