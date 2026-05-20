@@ -3,8 +3,9 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import AppointmentCounts from './AppointmentCounts';
+import Swal from 'sweetalert2';
 
 
 type Appointment = {
@@ -42,6 +43,8 @@ export default function AppointmentSlots() {
   const fetchAppointments = async () => {
     if (!date) return;
     setLoading(true);
+    Swal.fire({text:"Fetching Appointments..."});
+    Swal.showLoading();
 
     try {
       const res = await fetch(`/api/appointmentslots?date=${date}`);
@@ -76,8 +79,59 @@ export default function AppointmentSlots() {
       alert('Failed to fetch appointments');
     } finally {
       setLoading(false);
+      Swal.close();
     }
   };
+
+
+  useEffect(()=>{
+    fetchAppointments()
+  },[date])
+
+
+
+const copyAllResults = async () => {
+  if (appointments.length === 0) {
+    Swal.fire({
+      icon: 'info',
+      text: 'No appointments to copy',
+    });
+    return;
+  }
+
+  const formattedText = appointments
+    .map(appt => {
+      return `
+Time: ${formatTimeMT(appt.startTime)} - ${formatTimeMT(appt.endTime)}
+Title: ${appt.title || 'N/A'}
+Contact: ${appt.contact?.name || 'N/A'}
+Calendar: ${appt._calendarName || 'N/A'}
+Description: ${appt.description || 'N/A'}
+----------------------------------------
+`;
+    })
+    .join('\n');
+
+  try {
+    await navigator.clipboard.writeText(formattedText);
+
+    Swal.fire({
+      icon: 'success',
+      text: 'Appointments copied successfully!',
+      timer: 2000,
+      showConfirmButton: false,
+    });
+  } catch (error) {
+    console.error(error);
+
+    Swal.fire({
+      icon: 'error',
+      text: 'Failed to copy appointments',
+    });
+  }
+};
+
+
 
   return (
     <div className="max-w-2xl mx-auto p-6 space-y-6">
@@ -104,6 +158,24 @@ export default function AppointmentSlots() {
       <AppointmentCounts date={date} appointments={appointments} />
 
       {/* ---------- ORIGINAL LIST VIEW (UNCHANGED) ---------- */}
+     <div className="flex items-center justify-between">
+  <button
+    onClick={fetchAppointments}
+    className="bg-black text-white px-4 py-2 rounded"
+    disabled={loading}
+  >
+    {loading ? 'Loading…' : 'Fetch Appointments'}
+  </button>
+
+  <button
+    onClick={copyAllResults}
+    className="bg-blue-600 text-white px-4 py-2 rounded"
+    disabled={appointments.length === 0}
+  >
+    Copy All Results
+  </button>
+</div>
+
       <div className="mt-4 space-y-2">
         {appointments.length === 0 && date && (
           <p className="text-gray-500">No appointments found.</p>
