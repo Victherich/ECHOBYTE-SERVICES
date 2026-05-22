@@ -35,7 +35,7 @@ type Batch = {
 ================================================== */
 
 const LOCATION_ID = 'CiEtB9OjzkOWOii1MzM3';
-const ASSIGNED_USER_ID = 'SAGzTk9dekoeN7nJaWOs';
+const ASSIGNED_USER_ID = 'jTJO8vGjbEudVHABgJpY';
 
 const CALENDARS = [
   { id: 'L70jVxGrKzFi7mPEwHFi', name: 'El Paso English' },
