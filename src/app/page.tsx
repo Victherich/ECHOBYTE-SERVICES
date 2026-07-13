@@ -42,11 +42,11 @@ export default function LandingPage() {
       <div className="max-w-3xl mx-auto space-y-8">
         
         <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
-          Let's Build Something <span className="text-blue-600">Amazing</span> Together.
+          Let us Build Something <span className="text-blue-600">Amazing</span> Together.
         </h2>
         
         <p className="text-lg md:text-xl text-slate-500 leading-relaxed max-w-xl mx-auto">
-          Whether you're a startup, institution, or enterprise — we're ready to bring your vision to life with precision and purpose.
+          Whether you are a startup, institution, or enterprise — we are ready to bring your vision to life with precision and purpose.
         </p>
 
         <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
