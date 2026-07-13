@@ -162,6 +162,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
   const pathname = usePathname();
+  const [isMounted, setIsMounted] = useState(false);
   const moreRef = useRef<HTMLDivElement | null>(null);
 
 useEffect(() => {
@@ -179,6 +180,29 @@ useEffect(() => {
     document.removeEventListener('mousedown', handleClickOutside);
   };
 }, []);
+
+
+// Mark as mounted on the client
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (moreRef.current && !moreRef.current.contains(event.target as Node)) {
+        setMoreOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Prevent mismatch by not rendering dynamic paths/state until mounted
+  if (!isMounted) {
+    return (
+      <header className="fixed top-0 left-0 w-full z-50 bg-gray-900 border-b border-gray-900 h-16" />
+    );
+  }
 
 
   return (
