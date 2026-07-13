@@ -7,12 +7,12 @@ import React from 'react';
 const quickLinks = [
   { name: 'Home', href: '/' },
   { name: 'About Us', href: '/aboutus' },
-  { name: 'Our Clients', href: '/ourclients' },
+  // { name: 'Our Clients', href: '/ourclients' },
   { name: 'Web Services', href: '/services' },
   { name: 'Mobile Services', href: '/mobileservices' },
-  { name: 'Digital Store', href: 'https://products.echobyteconcept.com' },
+  { name: 'Digital Store', href: 'https://courses.echobyteconcept.com' },
   { name: 'Portfolio Builder', href: '/comingsoon' },
-  { name: 'Academic Portal', href: '/comingsoon' },
+  { name: 'Website / ECommerce Builder', href: '/comingsoon' },
   { name: 'Affiliate', href: '/comingsoon' },
   { name: 'Partnership', href: '/comingsoon' },
 ];

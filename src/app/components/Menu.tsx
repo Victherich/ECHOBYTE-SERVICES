@@ -138,16 +138,16 @@ import { usePathname } from 'next/navigation';
 const mainNav = [
   { name: 'Home', href: '/' },
   { name: 'About Us', href: '/aboutus' },
-  { name: 'Clients', href: '/ourclients' },
+  // { name: 'Clients', href: '/ourclients' },
   { name: 'Contact Us', href: '/contactus' },
 ];
 
 const moreNav = [
    { name: 'Web Services', href: '/services' },
   { name: 'Mobile Services', href: '/mobileservices' },
-  { name: 'Digital Store', href: 'https://products.echobyteconcept.com' },
+  { name: 'Digital Store', href: 'https://courses.echobyteconcept.com' },
   { name: 'Portfolio Builder', href: '/comingsoon' },
-   { name: 'Academic Portal', href: '/comingsoon' },
+   { name: 'Website / ECommerce Builder', href: '/comingsoon' },
   
 
   { name: 'Affiliate', href: '/comingsoon' },

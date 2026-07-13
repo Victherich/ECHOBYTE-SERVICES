@@ -56,14 +56,15 @@ const ProjectsMilestoneBadge = () => {
           </h3>
 
           <p className="text-gray-600 text-lg sm:text-xl font-medium mb-10">
-            Within our first year, we&apos;re proud to have successfully delivered
+            
+            We&apos;re proud to have successfully delivered
             impactful solutions.
           </p>
 
           {/* Milestone Number */}
           <div className="flex items-center justify-center gap-4">
             <span className="text-yellow-500 text-6xl sm:text-7xl md:text-8xl font-extrabold tracking-tight leading-none">
-              40+
+              110+
             </span>
             <span className="text-gray-900 text-4xl sm:text-5xl font-bold">
               Projects

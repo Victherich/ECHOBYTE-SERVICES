@@ -124,7 +124,7 @@ const products = [
     title: 'Courses',
     description:
       'Discover our collection of courses for your Advancements',
-    link: 'https://products.echobyteconcept.com',
+    link: 'https://courses.echobyteconcept.com',
     buttonText: 'Explore',
     image: '/s3.png',
   },
@@ -136,14 +136,24 @@ const products = [
     buttonText: 'Explore',
     image: '/s4.png',
   },
-  {
-    title: 'Academic Portal',
+
+    {
+    title: 'Business Website / E-Commerce Builder',
     description:
-      'A smart and automated academic portal for students and institutions to run and manage all academic activities, exams, lectures, payments etc.',
+      'Get a modern Business / E-Commerce website that gives visibility to your business.',
     link: '/comingsoon',
     buttonText: 'Explore',
     image: '/s5.png',
   },
+
+  // {
+  //   title: 'Academic Portal',
+  //   description:
+  //     'A smart and automated academic portal for students and institutions to run and manage all academic activities, exams, lectures, payments etc.',
+  //   link: '/comingsoon',
+  //   buttonText: 'Explore',
+  //   image: '/s5.png',
+  // },
 ];
 
 const ServicesSection = () => {
