@@ -24,53 +24,109 @@
 
 
 
+// 'use client';
+
+// import React from 'react';
+
+// const WhyChooseSection: React.FC = () => {
+//   return (
+//     <section className="relative py-20 px-6 bg-slate-50 overflow-hidden">
+//       {/* Decorative background blur */}
+//       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20 pointer-events-none">
+//         <div className="absolute top-10 left-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl"></div>
+//         <div className="absolute bottom-10 right-10 w-72 h-72 bg-indigo-400 rounded-full blur-3xl"></div>
+//       </div>
+
+//       <div className="max-w-6xl mx-auto relative z-10">
+//         <div className="text-center mb-16">
+//           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">
+//             Why Choose <span className="text-blue-600">EchoByte Concept?</span>
+//           </h2>
+//           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+//             We transform complex business requirements into high-performance digital products.
+//           </p>
+//         </div>
+
+//         <div className="grid md:grid-cols-3 gap-6">
+//           {/* Card 1 */}
+//           <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+//             <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 text-2xl">⚡</div>
+//             <h3 className="text-xl font-bold text-slate-900 mb-3">Custom & Scalable</h3>
+//             <p className="text-slate-600 leading-relaxed">
+//               100% bespoke development. We build responsive, scalable architectures that grow in lockstep with your business.
+//             </p>
+//           </div>
+
+//           {/* Card 2 */}
+//           <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+//             <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6 text-2xl">🚀</div>
+//             <h3 className="text-xl font-bold text-slate-900 mb-3">Fast Delivery</h3>
+//             <p className="text-slate-600 leading-relaxed">
+//               Velocity meets quality. We prioritize clear communication and dedicated post-launch support to keep your operations running smoothly.
+//             </p>
+//           </div>
+
+//           {/* Card 3 */}
+//           <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+//             <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 text-2xl">💡</div>
+//             <h3 className="text-xl font-bold text-slate-900 mb-3">Problem-First</h3>
+//             <p className="text-slate-600 leading-relaxed">
+//               We bridge the gap between complex tech and simple business results, focusing on solutions that are easy to adopt and highly effective.
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default WhyChooseSection;
+
+
 'use client';
 
 import React from 'react';
 
 const WhyChooseSection: React.FC = () => {
   return (
-    <section className="relative py-20 px-6 bg-slate-50 overflow-hidden">
+    <section className="relative py-[10px] px-[10px] overflow-hidden" style={{ background: "#e4ecf3" }}>
       {/* Decorative background blur */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-20 pointer-events-none">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-72 h-72 bg-indigo-400 rounded-full blur-3xl"></div>
+        <div className="absolute top-[10px] left-[10px] w-72 h-72 bg-blue-400 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-[10px] right-[10px] w-72 h-72 bg-indigo-400 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">
-            Why Choose <span className="text-blue-600">EchoByte Concept?</span>
-          </h2>
-          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            We transform complex business requirements into high-performance digital products.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-[10px]">
           {/* Card 1 */}
-          <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 text-2xl">⚡</div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3">Custom & Scalable</h3>
-            <p className="text-slate-600 leading-relaxed">
+          <div className="bg-white/70 backdrop-blur-md p-[10px] rounded-2xl border border-white/60 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-[10px] text-xl">⚡</div>
+            <h3 className="text-lg font-bold text-slate-900 mb-[10px]">
+              Custom & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Scalable</span>
+            </h3>
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
               100% bespoke development. We build responsive, scalable architectures that grow in lockstep with your business.
             </p>
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6 text-2xl">🚀</div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3">Fast Delivery</h3>
-            <p className="text-slate-600 leading-relaxed">
+          <div className="bg-white/70 backdrop-blur-md p-[10px] rounded-2xl border border-white/60 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-[10px] text-xl">🚀</div>
+            <h3 className="text-lg font-bold text-slate-900 mb-[10px]">
+              Fast <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Delivery</span>
+            </h3>
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
               Velocity meets quality. We prioritize clear communication and dedicated post-launch support to keep your operations running smoothly.
             </p>
           </div>
 
           {/* Card 3 */}
-          <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 text-2xl">💡</div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3">Problem-First</h3>
-            <p className="text-slate-600 leading-relaxed">
+          <div className="bg-white/70 backdrop-blur-md p-[10px] rounded-2xl border border-white/60 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-[10px] text-xl">💡</div>
+            <h3 className="text-lg font-bold text-slate-900 mb-[10px]">
+              Problem-<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">First</span>
+            </h3>
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
               We bridge the gap between complex tech and simple business results, focusing on solutions that are easy to adopt and highly effective.
             </p>
           </div>

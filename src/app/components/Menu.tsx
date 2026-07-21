@@ -1,136 +1,226 @@
+
 // 'use client';
 
-// import React, { useState, useEffect } from 'react';
-// import { useRouter } from 'next/navigation';
+// import React, { useState, useRef, useEffect } from 'react';
 
+// import Image from 'next/image';
+// import Link from 'next/link';
+// import { usePathname } from 'next/navigation';
 
-// const menuItems = [
-//   { name: 'Echobyte Home', link: '/' },
-//    {name:'Digital Store Home', link:'https://products.echobyteconcept.com' },
-//      {name:'Portfolio Builder', link:'/comingsoon' },
-//   {name:'Echobyte Affiliate', link:'/comingsoon' },
-//  {name:'Echobyte Partnership', link:'/comingsoon' },
+// const mainNav = [
+//   { name: 'Home', href: '/' },
+//   { name: 'About Us', href: '/aboutus' },
+//   // { name: 'Clients', href: '/ourclients' },
+//   { name: 'Contact Us', href: '/contactus' },
 // ];
 
+// const moreNav = [
+//    { name: 'Web Services', href: '/services' },
+//   { name: 'Mobile Services', href: '/mobileservices' },
+//   { name: 'Digital Store', href: 'https://courses.echobyteconcept.com' },
+//   { name: 'Portfolio Builder', href: '/comingsoon' },
+//    { name: 'Website / ECommerce Builder', href: '/comingsoon' },
+  
 
-
-// const menuItems2 = [
-
-//   { name: 'Web Services', link: '/services' },
-//   { name: 'Mobile Services', link: '/mobileservices' },
-
+//   { name: 'Affiliate', href: '/comingsoon' },
+//   { name: 'Partnership', href: '/comingsoon' },
 // ];
 
+// const isExternal = (url: string) =>
+//   url.startsWith('http://') || url.startsWith('https://');
 
 
-// const menuItems3 = [
+// export default function Header() {
+//   const [menuOpen, setMenuOpen] = useState(false);
+//   const [moreOpen, setMoreOpen] = useState(false);
+//   const pathname = usePathname();
+//   const [isMounted, setIsMounted] = useState(false);
+//   const moreRef = useRef<HTMLDivElement | null>(null);
 
-
-//   { name: 'About Echobyte', link: '/aboutus' },
-//   { name: 'Our Clients / Partners', link: '/ourclients' },
-// ];
-
-// const Menu: React.FC = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   const router = useRouter();
-
-//   const toggleMenu = () => setIsOpen(!isOpen);
-
-//   const closeMenu = (e: MouseEvent) => {
-//     const target = e.target as HTMLElement;
-//     if (!target.closest('#menu-container')) {
-//       setIsOpen(false);
+// useEffect(() => {
+//   const handleClickOutside = (event: MouseEvent) => {
+//     if (
+//       moreRef.current &&
+//       !moreRef.current.contains(event.target as Node)
+//     ) {
+//       setMoreOpen(false);
 //     }
 //   };
 
-//   useEffect(() => {
-//     document.addEventListener('click', closeMenu);
-//     return () => {
-//       document.removeEventListener('click', closeMenu);
-//     };
-//   }, []);
-
-
-
-//   useEffect(() => {
-//   const interval = setInterval(() => {
-//     setIsOpen(true);
-//   },1*60*1000);
-//   return () => clearInterval(interval);
+//   document.addEventListener('mousedown', handleClickOutside);
+//   return () => {
+//     document.removeEventListener('mousedown', handleClickOutside);
+//   };
 // }, []);
 
 
+// // Mark as mounted on the client
+//   useEffect(() => {
+//     setIsMounted(true);
+//   }, []);
+
+//   useEffect(() => {
+//     const handleClickOutside = (event: MouseEvent) => {
+//       if (moreRef.current && !moreRef.current.contains(event.target as Node)) {
+//         setMoreOpen(false);
+//       }
+//     };
+//     document.addEventListener('mousedown', handleClickOutside);
+//     return () => document.removeEventListener('mousedown', handleClickOutside);
+//   }, []);
+
+//   // Prevent mismatch by not rendering dynamic paths/state until mounted
+//   if (!isMounted) {
+//     return (
+//       <header className="fixed top-0 left-0 w-full z-50 bg-gray-900 border-b border-gray-900 h-16" />
+//     );
+//   }
+
+
 //   return (
-//     <div
-//       id="menu-container"
-//       className="fixed top-2.5 right-2.5 z-[1000]"
+//     <header className="fixed top-0 left-0 w-full z-50 bg-gray-900 border-b border-gray-900 
+   
+//     ">
+//       <div className="max-w-7xl mx-auto px-4">
+//         <div className="flex items-center justify-between h-16">
+
+//           {/* Logo */}
+//           <Link href="/" className="flex items-center gap-2">
+//             <Image
+//               src="/logo.jpeg"
+//               alt="Echobyte Logo"
+//               width={36}
+//               height={36}
+//               priority
+//               className="object-contain rounded-full"
+//             />
+//             <span className="text-lg font-semibold text-white">
+//               Echobyte
+//             </span>
+//           </Link>
+
+//           {/* Desktop Menu */}
+//           <nav className="hidden md:flex items-center gap-6">
+//             {mainNav.map((item) => (
+//               <Link
+//                 key={item.name}
+//                 href={item.href}
+//                 className={`text-sm font-medium transition-colors ${
+//                   pathname === item.href
+//                     ? 'text-blue-400'
+//                     : 'text-gray-300 hover:text-white'
+//                 }`}
+//               >
+//                 {item.name}
+//               </Link>
+//             ))}
+
+//             {/* Desktop Dropdown */}
+//             <div className="relative" ref={moreRef}>
+//               <button
+//                 onClick={() => setMoreOpen(!moreOpen)}
+//                 className="text-sm font-medium text-gray-300 hover:text-white flex items-center gap-1"
+//               >
+//                 More
+//                 <span className="text-xs">▾</span>
+//               </button>
+
+//               {moreOpen && (
+//                 <div className="absolute right-0 mt-2 w-48 bg-gray-800 border border-gray-700 rounded-md shadow-lg">
+//                  {moreNav.map((item) => {
+//   const external = isExternal(item.href);
+
+//   return (
+//     <Link
+//       key={item.name}
+//       href={item.href}
+//       onClick={() => setMoreOpen(false)}
+//       target={external ? "_blank" : undefined}
+//       rel={external ? "noopener noreferrer" : undefined}
+//       className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
 //     >
-//       <div
-//         onClick={toggleMenu}
-//         onMouseEnter={() => setIsOpen(true)}
-//         className="bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm px-5 py-1.5 rounded-full shadow-lg cursor-pointer select-none transition-colors duration-300 md:px-2.5"
-//       >
-//         📜 Menu
+//       {item.name}
+//     </Link>
+//   );
+// })}
+
+//                 </div>
+//               )}
+//             </div>
+//           </nav>
+
+//           {/* Mobile Hamburger */}
+//           <button
+//             onClick={() => setMenuOpen(!menuOpen)}
+//             className="md:hidden flex flex-col gap-1.5"
+//             aria-label="Toggle menu"
+//           >
+//             <span className="w-6 h-0.5 bg-gray-200"></span>
+//             <span className="w-6 h-0.5 bg-gray-200"></span>
+//             <span className="w-6 h-0.5 bg-gray-200"></span>
+//           </button>
+//         </div>
 //       </div>
 
-//       <ul
-//         className={`absolute right-0 top-12 w-48 bg-gray-100 rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-out ${
-//           isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
-//         }`}
-//       >
-//         <p style={{fontWeight:"bold", paddingLeft:"5px", paddingTop:"20px", textDecoration:"underline", fontSize:"0.8rem", color:"#222"}}>HOME PAGES</p>
-//         {menuItems.map((item, index) => (
-//           <li
-//             key={index}
-//             onClick={() => {
-//               setIsOpen(false);
-//               router.push(item.link);
-//             }}
-//             className="px-4 py-1 text-sm font-medium text-blue-900 hover:bg-gray-200 cursor-pointer flex items-center gap-2"
-//           >
-//             {item.name}
-//           </li>
-//         ))}
-// <p style={{fontWeight:"bold", paddingLeft:"5px", paddingTop:"20px", textDecoration:"underline", fontSize:"0.8rem", color:"#222" }}>SERVICES</p>
-//          {menuItems2.map((item, index) => (
-//           <li
-//             key={index}
-//             onClick={() => {
-//               setIsOpen(false);
-//               router.push(item.link);
-//             }}
-//             className="px-4 py-1 text-sm font-medium text-blue-900 hover:bg-gray-200 cursor-pointer flex items-center gap-2"
-//           >
-//             {item.name}
-//           </li>
-//         ))}
+//       {/* Mobile Menu */}
+//       {menuOpen && (
+//         <div className="md:hidden bg-gray-900 border-t border-gray-800">
+//           <nav className="flex flex-col px-4 py-3">
 
-//         <p style={{fontWeight:"bold", paddingLeft:"5px", paddingTop:"20px", textDecoration:"underline", fontSize:"0.8rem", color:"#222"}}>OTHER</p>
-//          {menuItems3.map((item, index) => (
-//           <li
-//             key={index}
-//             onClick={() => {
-//               setIsOpen(false);
-//               router.push(item.link);
-//             }}
-//             className="px-4 py-2 text-sm font-medium text-blue-900 hover:bg-gray-200 cursor-pointer flex items-center gap-2"
-//           >
-//             {item.name}
-//           </li>
-//         ))}
-//       </ul>
+//             {mainNav.map((item) => (
+//               <Link
+//                 key={item.name}
+//                 href={item.href}
+//                 onClick={() => setMenuOpen(false)}
+//                 className="py-2 text-sm font-medium text-gray-300 hover:text-white"
+//               >
+//                 {item.name}
+//               </Link>
+//             ))}
 
+//             {/* Mobile Dropdown */}
+//             <button
+//               onClick={() => setMoreOpen(!moreOpen)}
+//               className="py-2 text-left text-sm font-medium text-gray-300 hover:text-white flex items-center justify-between"
+//             >
+//               More
+//               <span>▾</span>
+//             </button>
 
+//             {moreOpen && (
+//               <div className="pl-4 border-l border-gray-700" ref={moreRef}>
+//                {moreNav.map((item) => {
+//   const external = isExternal(item.href);
 
-//     </div>
+//   return (
+//     <Link
+//       key={item.name}
+//       href={item.href}
+//       onClick={() => setMoreOpen(false)}
+//       target={external ? "_blank" : undefined}
+//       rel={external ? "noopener noreferrer" : undefined}
+//       className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+//     >
+//       {item.name}
+//     </Link>
 //   );
-// };
+// })}
 
-// export default Menu;
+//               </div>
+//             )}
+
+//           </nav>
+//         </div>
+//       )}
+//     </header>
+//   );
+// }
+
+
+
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -143,86 +233,69 @@ const mainNav = [
 ];
 
 const moreNav = [
-   { name: 'Web Services', href: '/services' },
+  { name: 'Web Services', href: '/services' },
   { name: 'Mobile Services', href: '/mobileservices' },
-  { name: 'Digital Store', href: 'https://courses.echobyteconcept.com' },
-  { name: 'Portfolio Builder', href: '/comingsoon' },
-   { name: 'Website / ECommerce Builder', href: '/comingsoon' },
-  
-
-  { name: 'Affiliate', href: '/comingsoon' },
-  { name: 'Partnership', href: '/comingsoon' },
+  { name: 'Courses', href: 'https://courses.echobyteconcept.com' },
+  { name: 'Portfolio Builder', href: 'https://myportfolioechobyte.vercel.app' },
+  { name: 'Website / ECommerce Builder', href: '/comingsoon' },
+  { name: 'Affiliate', href: '/contactus' },
+  { name: 'Partnership', href: '/contactus' },
 ];
 
-const isExternal = (url: string) =>
+const isExternal = (url) =>
   url.startsWith('http://') || url.startsWith('https://');
 
+// Helper style for gradient text
+const gradientTextStyle = "text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
   const pathname = usePathname();
   const [isMounted, setIsMounted] = useState(false);
-  const moreRef = useRef<HTMLDivElement | null>(null);
-
-useEffect(() => {
-  const handleClickOutside = (event: MouseEvent) => {
-    if (
-      moreRef.current &&
-      !moreRef.current.contains(event.target as Node)
-    ) {
-      setMoreOpen(false);
-    }
-  };
-
-  document.addEventListener('mousedown', handleClickOutside);
-  return () => {
-    document.removeEventListener('mousedown', handleClickOutside);
-  };
-}, []);
-
-
-// Mark as mounted on the client
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const moreRef = useRef(null);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (moreRef.current && !moreRef.current.contains(event.target as Node)) {
+    const handleClickOutside = (event) => {
+      if (moreRef.current && !moreRef.current.contains(event.target)) {
         setMoreOpen(false);
       }
     };
+
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  // Mark as mounted on the client
+  useEffect(() => {
+    setIsMounted(true);
   }, []);
 
   // Prevent mismatch by not rendering dynamic paths/state until mounted
   if (!isMounted) {
     return (
-      <header className="fixed top-0 left-0 w-full z-50 bg-gray-900 border-b border-gray-900 h-16" />
+      <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 h-16" />
     );
   }
 
-
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-gray-900 border-b border-gray-900 
-   
-    ">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2 group">
             <Image
               src="/logo.jpeg"
               alt="Echobyte Logo"
               width={36}
               height={36}
               priority
-              className="object-contain rounded-full"
+              className="object-contain rounded-full border border-gray-200"
             />
-            <span className="text-lg font-semibold text-white">
+            <span className={`text-lg font-semibold ${gradientTextStyle}`}>
               Echobyte
             </span>
           </Link>
@@ -235,8 +308,8 @@ useEffect(() => {
                 href={item.href}
                 className={`text-sm font-medium transition-colors ${
                   pathname === item.href
-                    ? 'text-blue-400'
-                    : 'text-gray-300 hover:text-white'
+                    ? gradientTextStyle // Active link gets gradient
+                    : 'text-black-700 hover:text-blue-600'
                 }`}
               >
                 {item.name}
@@ -247,31 +320,34 @@ useEffect(() => {
             <div className="relative" ref={moreRef}>
               <button
                 onClick={() => setMoreOpen(!moreOpen)}
-                className="text-sm font-medium text-gray-300 hover:text-white flex items-center gap-1"
+                className={`text-sm font-medium flex items-center gap-1 transition-colors ${
+                    moreOpen ? gradientTextStyle : 'text-gray-900 hover:text-blue-600'
+                }`}
               >
                 More
                 <span className="text-xs">▾</span>
               </button>
 
               {moreOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-gray-800 border border-gray-700 rounded-md shadow-lg">
-                 {moreNav.map((item) => {
-  const external = isExternal(item.href);
-
-  return (
-    <Link
-      key={item.name}
-      href={item.href}
-      onClick={() => setMoreOpen(false)}
-      target={external ? "_blank" : undefined}
-      rel={external ? "noopener noreferrer" : undefined}
-      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
-    >
-      {item.name}
-    </Link>
-  );
-})}
-
+                <div className="absolute right-0 mt-2 w-56 bg-white/90 backdrop-blur-md border border-gray-100 rounded-xl shadow-xl py-2 z-50">
+                  <div className={`px-4 py-2 text-xs font-bold uppercase tracking-wider ${gradientTextStyle} border-b border-gray-100 mb-1`}>
+                    Services & More
+                  </div>
+                  {moreNav.map((item) => {
+                    const external = isExternal(item.href);
+                    return (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setMoreOpen(false)}
+                        target={external ? "_blank" : undefined}
+                        rel={external ? "noopener noreferrer" : undefined}
+                        className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50/80 hover:text-blue-700 transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -280,27 +356,30 @@ useEffect(() => {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden flex flex-col gap-1.5"
+            className="md:hidden flex flex-col gap-1.5 p-1"
             aria-label="Toggle menu"
           >
-            <span className="w-6 h-0.5 bg-gray-200"></span>
-            <span className="w-6 h-0.5 bg-gray-200"></span>
-            <span className="w-6 h-0.5 bg-gray-200"></span>
+            <span className="w-6 h-0.5 bg-gray-800 rounded"></span>
+            <span className="w-6 h-0.5 bg-gray-800 rounded"></span>
+            <span className="w-6 h-0.5 bg-gray-800 rounded"></span>
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-gray-900 border-t border-gray-800">
+        <div className="md:hidden bg-white/90 backdrop-blur-md border-t border-gray-100 shadow-lg absolute w-full left-0">
           <nav className="flex flex-col px-4 py-3">
-
             {mainNav.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="py-2 text-sm font-medium text-gray-300 hover:text-white"
+                className={`py-3 text-sm font-medium border-b border-gray-50 ${
+                    pathname === item.href
+                    ? gradientTextStyle
+                    : 'text-gray-700'
+                }`}
               >
                 {item.name}
               </Link>
@@ -309,31 +388,29 @@ useEffect(() => {
             {/* Mobile Dropdown */}
             <button
               onClick={() => setMoreOpen(!moreOpen)}
-              className="py-2 text-left text-sm font-medium text-gray-300 hover:text-white flex items-center justify-between"
+              className="py-3 text-left text-sm font-medium text-gray-700 flex items-center justify-between border-b border-gray-50"
             >
-              More
-              <span>▾</span>
+              <span className={moreOpen ? gradientTextStyle : ''}>More</span>
+              <span className={moreOpen ? gradientTextStyle : 'text-gray-400'}>▾</span>
             </button>
 
             {moreOpen && (
-              <div className="pl-4 border-l border-gray-700" ref={moreRef}>
-               {moreNav.map((item) => {
-  const external = isExternal(item.href);
-
-  return (
-    <Link
-      key={item.name}
-      href={item.href}
-      onClick={() => setMoreOpen(false)}
-      target={external ? "_blank" : undefined}
-      rel={external ? "noopener noreferrer" : undefined}
-      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
-    >
-      {item.name}
-    </Link>
-  );
-})}
-
+              <div className="pl-4 bg-gray-50/80 backdrop-blur-sm rounded-lg my-2 py-2" ref={moreRef}>
+                {moreNav.map((item) => {
+                  const external = isExternal(item.href);
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={() => { setMoreOpen(false); setMenuOpen(false); }}
+                      target={external ? "_blank" : undefined}
+                      rel={external ? "noopener noreferrer" : undefined}
+                      className="block py-2.5 text-sm text-gray-600 hover:text-blue-600"
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                })}
               </div>
             )}
 

@@ -36,49 +36,45 @@
 // export default ProjectsMilestoneBadge;
 
 
-
+'use client';
 
 import React from 'react';
 
-const ProjectsMilestoneBadge = () => {
+const ProjectsMilestoneBadge: React.FC = () => {
   return (
-    <section className="py-20 px-4 sm:px-8 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="w-full text-gray-900 px-[10px] py-[10px]" style={{ background: "#e4ecf3" }}>
+      <div className="w-full max-w-4xl mx-auto">
 
         {/* Badge Container */}
-        <div className="relative bg-blue-400/10 border-4 border-gray-800 rounded-3xl px-8 py-14 sm:px-14 shadow-xl transition-transform duration-300 hover:scale-[1.03]">
+        <div className="relative bg-white/70 backdrop-blur-md border border-white/60 rounded-2xl px-[10px] py-[10px] shadow-xl transition-transform duration-300 hover:scale-[1.01]">
           
-          {/* Decorative glow */}
-          <div className="absolute -inset-1 rounded-3xl bg-blue-400/0 blur-xl -z-10" />
-
-          <h3 className="text-gray-900 text-3xl sm:text-4xl font-extrabold mb-4">
-            Celebrating a Major Milestone
+          <h3 className="text-gray-900 text-xl sm:text-2xl font-extrabold mb-[10px] text-center">
+            Celebrating a Major <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Milestone</span>
           </h3>
 
-          <p className="text-gray-600 text-lg sm:text-xl font-medium mb-10">
-            
-            We&apos;re proud to have successfully delivered
-            impactful solutions.
+          <p className="text-gray-600 text-xs sm:text-sm font-medium mb-[10px] text-center">
+            We&apos;re proud to have successfully delivered impactful solutions.
           </p>
 
-          {/* Milestone Number */}
-          <div className="flex items-center justify-center gap-4">
-            <span className="text-yellow-500 text-6xl sm:text-7xl md:text-8xl font-extrabold tracking-tight leading-none">
-              110+
-            </span>
-            <span className="text-gray-900 text-4xl sm:text-5xl font-bold">
-              Projects
-            </span>
+          {/* Milestone Number and Content Card */}
+          <div className="p-[10px] rounded-xl bg-gradient-to-br from-blue-900/10 via-purple-900/5 to-white/80 border border-white/80 shadow-sm flex flex-col items-center justify-center gap-[10px] my-[10px]">
+            <div className="flex items-center justify-center gap-[10px]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 text-4xl sm:text-5xl font-extrabold tracking-tight leading-none">
+                110+
+              </span>
+              <span className="text-gray-900 text-2xl sm:text-3xl font-bold">
+                Projects
+              </span>
+            </div>
+
+            <p className="text-gray-600 text-xs sm:text-sm font-medium text-center max-w-xl">
+              Delivered for amazing clients — helping businesses grow, scale, and succeed with confidence.
+            </p>
           </div>
 
-          <p className="text-gray-600 text-lg sm:text-xl font-medium mt-10 max-w-2xl mx-auto">
-            Delivered for amazing clients — helping businesses grow, scale,
-            and succeed with confidence.
-          </p>
-
           {/* Bottom Accent */}
-          <div className="mt-12 flex justify-center">
-            <div className="h-1 w-28 bg-yellow-400 rounded-full" />
+          <div className="mt-[10px] flex justify-center">
+            <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
           </div>
         </div>
       </div>

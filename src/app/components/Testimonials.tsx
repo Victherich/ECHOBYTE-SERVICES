@@ -1,21 +1,21 @@
-// 'use client';
 
-// import React from 'react';
-// import styled from 'styled-components';
-// const Cerens = '/Cerens.jpeg';
-// const Kingsley = '/Kingsley.jpeg';
-// const Blessing = '/Blessing.jpg';
 
-// // Define the shape of a testimonial
+// 'use client'
+
+// import React from 'react'
+// const Cerens = '/Cerens.jpeg'
+// const Kingsley = '/Kingsley.jpeg'
+// const Blessing = '/Blessing.jpg'
+
+// // Testimonial type
 // type Testimonial = {
-//   name: string;
-//   email: string;
-//   country: string;
-//   message: string;
-//   image: string;
-// };
+//   name: string
+//   email: string
+//   country: string
+//   message: string
+//   image: string
+// }
 
-// // Static testimonials array
 // const testimonials: Testimonial[] = [
 //   {
 //     name: 'Cerens Anong',
@@ -38,101 +38,42 @@
 //     message: 'Absolutely the best service, keep it up guys.',
 //     image: Blessing,
 //   },
-// ];
+// ]
 
-// // Styled components
-// const ContainerWrap = styled.div`
-//   width: 100%;
-//   margin-top: 50px;
-// `;
-
-// const TestimonialsContainer = styled.div`
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-//   gap: 20px;
-//   padding: 20px;
-// `;
-
-// const TestimonialCard = styled.div<{ $bgImage: string }>`
-//   position: relative;
-//   width: 100%;
-//   height: 300px;
-//   border-radius: 15px;
-//   overflow: hidden;
-//   color: white;
-//   display: flex;
-//   align-items: flex-end;
-//   justify-content: center;
-//   text-align: center;
-//   padding: 20px;
-//   background: url(${(props) => props.$bgImage}) center/cover no-repeat;
-//   background-position: top;
-
-//   &::before {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     // background: rgba(0, 0, 0, 0.4);
-//   }
-// `;
-
-// const TestimonialContent = styled.div`
-//   position: relative;
-//   z-index: 2;
-//   max-width: 90%;
-//   background: rgba(0, 0, 0, 0.5);
-//   padding: 8px;
-//   border-radius: 8px;
-// `;
-
-// const Name = styled.h4`
-//   margin-top: 8px;
-// `;
-
-// const Email = styled.p`
-//   font-size: 0.75rem;
-//   opacity: 0.8;
-// `;
-
-// const Message = styled.p`
-//   font-size: 0.85rem;
-//   font-style: italic;
-//   margin-bottom: 10px;
-// `;
-
-// const Heading = styled.h1`
-//   text-align: center;
-//   color: white;
-//   font-weight: 700;
-//   font-size: 2.5rem;
-//   margin-bottom: 20px;
-// `;
-
-// // Component
 // const Testimonials: React.FC = () => {
 //   return (
-//     <ContainerWrap>
-//       <Heading>What Our Real Clients Say:</Heading>
-//       <TestimonialsContainer>
-//         {testimonials.map((client, index) => (
-//           <TestimonialCard key={index} $bgImage={client.image}>
-//             <TestimonialContent>
-//               <Message>&quot;{client.message}&quot;</Message>
-//               <Name>{client.name}</Name>
-//               <Email>{client.email}</Email>
-//               <Email>{client.country}</Email>
-//             </TestimonialContent>
-//           </TestimonialCard>
-//         ))}
-//       </TestimonialsContainer>
-//     </ContainerWrap>
-//   );
-// };
+//     <div className="w-full px-4 py-20" style={{background:"#e4ecf3"}}>
+//        <h2 className="text-gray-900 text-4xl font-bold text-center mb-16 tracking-tight">
+//         What Our Clients Say:
+//       </h2>
 
-// export default Testimonials;
+//       <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
+//         {testimonials.map((client, index) => (
+//           <div
+//             key={index}
+//             className="relative w-full h-[300px] rounded-xl overflow-hidden flex items-end justify-center text-white bg-cover bg-top shadow-lg"
+//             style={{ backgroundImage: `url(${client.image})` }}
+//           >
+//             <div className="relative z-10 w-[90%] bg-black/50 p-4 rounded-md text-center">
+//              <p className="text-sm italic mb-2">&quot;{client.message}&quot;</p>
+
+//               <h4 className="text-md font-semibold">{client.name}</h4>
+//               <p className="text-xs opacity-80">{client.email}</p>
+//               <p className="text-xs opacity-80">{client.country}</p>
+//             </div>
+
+//             {/* Optional overlay (for future use) */}
+//             {/* <div className="absolute inset-0 bg-black/40"></div> */}
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default Testimonials
+
+
 
 
 'use client'
@@ -177,34 +118,34 @@ const testimonials: Testimonial[] = [
 
 const Testimonials: React.FC = () => {
   return (
-    <div className="w-full px-4 py-20" style={{background:"#e4ecf3"}}>
-       <h2 className="text-gray-900 text-4xl font-bold text-center mb-16 tracking-tight">
-        What Our Clients Say:
+    <section className="w-full text-gray-900 px-[10px] py-[70px]" style={{ background: "#e4ecf3" }}>
+      <h2 className="text-gray-900 text-2xl sm:text-3xl font-extrabold text-center mb-[10px] tracking-tight">
+        What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Clients Say</span>
       </h2>
 
-      <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-[10px]">
         {testimonials.map((client, index) => (
           <div
             key={index}
-            className="relative w-full h-[300px] rounded-xl overflow-hidden flex items-end justify-center text-white bg-cover bg-top shadow-lg"
+            className="relative w-full h-[280px] rounded-2xl overflow-hidden flex items-end justify-center text-white bg-cover bg-top shadow-xl border border-white/60 transition-transform duration-300 hover:scale-[1.01]"
             style={{ backgroundImage: `url(${client.image})` }}
           >
-            <div className="relative z-10 w-[90%] bg-black/50 p-4 rounded-md text-center">
-             <p className="text-sm italic mb-2">&quot;{client.message}&quot;</p>
+            {/* Gradient Overlay for Modern Aesthetics */}
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/40 to-transparent"></div>
 
-              <h4 className="text-md font-semibold">{client.name}</h4>
-              <p className="text-xs opacity-80">{client.email}</p>
-              <p className="text-xs opacity-80">{client.country}</p>
+            <div className="relative z-10 w-full p-[10px] text-center flex flex-col justify-between">
+              <p className="text-xs sm:text-sm italic font-medium mb-[10px] text-gray-100">&quot;{client.message}&quot;</p>
+
+              <div>
+                <h4 className="text-sm font-bold text-white">{client.name}</h4>
+                <p className="text-[11px] text-blue-200 font-medium">{client.country}</p>
+              </div>
             </div>
-
-            {/* Optional overlay (for future use) */}
-            {/* <div className="absolute inset-0 bg-black/40"></div> */}
           </div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 
 export default Testimonials
-

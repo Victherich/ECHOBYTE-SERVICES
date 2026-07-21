@@ -30,7 +30,7 @@ const ContactPage = () => {
   };
 
   return (
-    <section className="bg-gray-50 min-h-screen font-sans">
+    <section className="bg-gray-50 min-h-screen font-sans" style={{ background: "#e4ecf3" }}>
       
       {/* Hero Section with background image + overlay */}
       <div
@@ -62,12 +62,13 @@ const ContactPage = () => {
       </div>
 
       {/* Contact Form */}
-      <div id="contact-form" className="py-20 px-6 md:px-12 max-w-3xl mx-auto">
+      {/* <div id="contact-form" className="py-20">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-10">
           Send Us a Message
         </h2>
-        <ContactForm />
-      </div>
+       
+      </div> */}
+       <ContactForm />
 
       {/* FAQ Section */}
       <div className="bg-white py-20 px-6 md:px-12">
