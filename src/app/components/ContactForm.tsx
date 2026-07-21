@@ -377,7 +377,7 @@ const ContactForm: React.FC = () => {
           </div>
 
           <div className="p-[10px] rounded-xl bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-200/50 text-blue-900 text-center text-xs font-semibold shadow-sm">
-            ✨ Let's transform your vision into reality today!
+            ✨ Let us transform your vision into reality today!
           </div>
         </div>
   {/* Left Side: Contact Form inside a gorgeous card */}
