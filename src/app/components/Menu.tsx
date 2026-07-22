@@ -25,7 +25,7 @@
 //   { name: 'Partnership', href: '/contactus' },
 // ];
 
-// const isExternal = (url) =>
+// const isExternal = (url: string) =>
 //   url.startsWith('http://') || url.startsWith('https://');
 
 // // Helper style for gradient text
@@ -36,11 +36,11 @@
 //   const [moreOpen, setMoreOpen] = useState(false);
 //   const pathname = usePathname();
 //   const [isMounted, setIsMounted] = useState(false);
-//   const moreRef = useRef(null);
+//   const moreRef = useRef<HTMLDivElement>(null);
 
 //   useEffect(() => {
-//     const handleClickOutside = (event) => {
-//       if (moreRef.current && !moreRef.current.contains(event.target)) {
+//     const handleClickOutside = (event: MouseEvent) => {
+//       if (moreRef.current && !moreRef.current.contains(event.target as Node)) {
 //         setMoreOpen(false);
 //       }
 //     };
@@ -92,7 +92,7 @@
 //                 className={`text-sm font-medium transition-colors ${
 //                   pathname === item.href
 //                     ? gradientTextStyle // Active link gets gradient
-//                     : 'text-black-700 hover:text-blue-600'
+//                     : 'text-gray-700 hover:text-blue-600'
 //                 }`}
 //               >
 //                 {item.name}
@@ -205,6 +205,8 @@
 // }
 
 
+
+
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
@@ -229,7 +231,7 @@ const moreNav = [
   { name: 'Partnership', href: '/contactus' },
 ];
 
-const isExternal = (url: string) =>
+const isExternal = (url: string): boolean =>
   url.startsWith('http://') || url.startsWith('https://');
 
 // Helper style for gradient text
