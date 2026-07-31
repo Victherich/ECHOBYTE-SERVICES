@@ -21,10 +21,10 @@ const EmpowermentPromo= () => {
 
         <div className="relative z-10 p-[10px] rounded-2xl text-center max-w-3xl bg-white/60 backdrop-blur-md shadow-xl border border-white/80 mx-[10px]">
           <span className="inline-block px-3 py-1 mb-[10px] text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-md">
-            🔥 Limited-Time Empowerment Promo
+            🔥 Limited-Slots Empowerment Promo
           </span>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-wider mb-[10px]" style={{ fontFamily: 'cursive, sans-serif' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-wider mb-[10px]" style={{ fontStyle: 'italic' }}>
             <span 
               className="text-gray-900 inline-block italic" 
               style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.2)' }}
