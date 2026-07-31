@@ -2,7 +2,7 @@
 
 
 import React from 'react';
-import { FaLaptopCode, FaShieldAlt, FaDatabase, FaCreditCard, FaChartLine, FaCheckCircle, FaRocket } from 'react-icons/fa';
+import { FaLaptopCode, FaShieldAlt, FaDatabase, FaCreditCard, FaChartLine, FaCheckCircle, FaRocket, FaStore } from 'react-icons/fa';
 import Link from 'next/link';
 import { FaWebAwesome } from 'react-icons/fa6';
 
@@ -154,13 +154,13 @@ const EmpowermentPromo= () => {
               </div>
             </div>
 
-            {/* <div className="p-[10px] rounded-xl bg-white/50 border border-white/80 flex items-start gap-[10px]">
+            <div className="p-[10px] rounded-xl bg-white/50 border border-white/80 flex items-start gap-[10px]">
               <div className="text-purple-600 text-lg mt-0.5"><FaStore /></div>
               <div>
                 <h4 className="font-bold text-xs sm:text-sm text-gray-900">E-Commerce Ready</h4>
                 <p className="text-[11px] text-gray-600">Full online store setup to sell products or services seamlessly.</p>
               </div>
-            </div> */}
+            </div>
 
             <div className="p-[10px] rounded-xl bg-white/50 border border-white/80 flex items-start gap-[10px]">
               <div className="text-purple-600 text-lg mt-0.5"><FaCreditCard /></div>
