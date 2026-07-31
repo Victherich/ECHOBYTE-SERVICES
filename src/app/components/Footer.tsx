@@ -124,6 +124,7 @@ const quickLinks = [
   { name: 'Website / ECommerce Builder', href: '/comingsoon' },
   { name: 'Affiliate', href: '/comingsoon' },
   { name: 'Partnership', href: '/comingsoon' },
+  { name: 'Contact Us', href: '/contactus' },
 ];
 
 const Footer: React.FC = () => {

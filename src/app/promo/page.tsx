@@ -3,12 +3,14 @@
 
 import React from 'react';
 import { FaLaptopCode, FaShieldAlt, FaDatabase, FaCreditCard, FaStore, FaChartLine, FaCheckCircle, FaRocket } from 'react-icons/fa';
+import Link from 'next/link';
+import { FaWebAwesome } from 'react-icons/fa6';
 
 const EmpowermentPromo= () => {
-  const checkoutUrl = "https://courses.echobyteconcept.com"; // Replace with your exact external payment or registration URL
+  const checkoutUrl = "https://paystack.shop/pay/kp2nhw19-8"; // Replace with your exact external payment or registration URL
 
   return (
-    <section className="w-full text-gray-900 px-[10px] py-[10px] font-sans" style={{ background: "#e4ecf3" }}>
+    <section className="w-full text-gray-900 px-[10px] py-[80px] font-sans" style={{ background: "#e4ecf3" }}>
       
       {/* Hero Section */}
       <div
@@ -27,7 +29,7 @@ const EmpowermentPromo= () => {
               className="text-gray-900 inline-block italic" 
               style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.2)' }}
             >
-              RESELLER
+              WEBSITE
             </span>{' '}
             <span
               className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 inline-block italic"
@@ -36,7 +38,7 @@ const EmpowermentPromo= () => {
                 filter: 'drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3))',
               }}
             >
-              EMPOWERMENT
+              EMPOWERMENT PROMO
             </span>
           </h1>
 
@@ -50,7 +52,19 @@ const EmpowermentPromo= () => {
               <span>Enroll & Secure Your 3 Slots Now</span>
             </button>
           </a>
+
+             {/* Terms & Conditions Inline Notice / Link */}
+        <div className="text-center py-4 text-xs text-slate-500">
+          By enrolling or making a payment, you agree to EchoByte Concept's{' '}
+          <Link 
+            href="/promo-terms" /* Replace with your exact terms page route, e.g., /promo-terms */
+            className="text-blue-600 font-semibold underline hover:text-purple-600 transition-colors"
+          >
+            Promotional Terms & Conditions
+          </Link>
         </div>
+        </div>
+     
       </div>
 
       {/* Main Content Container */}
@@ -107,6 +121,15 @@ const EmpowermentPromo= () => {
           <p className="text-xs text-gray-500 text-center mb-[10px]">It&apos;s not just a website—it&apos;s a fully functional digital business engine:</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[10px]">
+
+              <div className="p-[10px] rounded-xl bg-white/50 border border-white/80 flex items-start gap-[10px]">
+              <div className="text-blue-600 text-lg mt-0.5"><FaWebAwesome /></div>
+              <div>
+                <h4 className="font-bold text-xs sm:text-sm text-gray-900">Professional Pages</h4>
+                <p className="text-[11px] text-gray-600">All necessary required pages for your webite.</p>
+              </div>
+            </div>
+
             <div className="p-[10px] rounded-xl bg-white/50 border border-white/80 flex items-start gap-[10px]">
               <div className="text-blue-600 text-lg mt-0.5"><FaLaptopCode /></div>
               <div>
@@ -131,13 +154,13 @@ const EmpowermentPromo= () => {
               </div>
             </div>
 
-            <div className="p-[10px] rounded-xl bg-white/50 border border-white/80 flex items-start gap-[10px]">
+            {/* <div className="p-[10px] rounded-xl bg-white/50 border border-white/80 flex items-start gap-[10px]">
               <div className="text-purple-600 text-lg mt-0.5"><FaStore /></div>
               <div>
                 <h4 className="font-bold text-xs sm:text-sm text-gray-900">E-Commerce Ready</h4>
                 <p className="text-[11px] text-gray-600">Full online store setup to sell products or services seamlessly.</p>
               </div>
-            </div>
+            </div> */}
 
             <div className="p-[10px] rounded-xl bg-white/50 border border-white/80 flex items-start gap-[10px]">
               <div className="text-purple-600 text-lg mt-0.5"><FaCreditCard /></div>
@@ -172,6 +195,17 @@ const EmpowermentPromo= () => {
               <span>Make Payment & Claim Your 3 Websites</span>
             </button>
           </a>
+
+             {/* Terms & Conditions Inline Notice / Link */}
+        <div className="text-center py-4 text-xs text-slate-500">
+          By enrolling or making a payment, you agree to EchoByte Concept's{' '}
+          <Link 
+            href="/promo-terms" /* Replace with your exact terms page route, e.g., /promo-terms */
+            className="text-blue-600 font-semibold underline hover:text-purple-600 transition-colors"
+          >
+            Promotional Terms & Conditions
+          </Link>
+        </div>
 
           <div className="mt-[10px] text-xs font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
             ECHOBYTE CONCEPT... Building websites and empowering entrepreneurs.

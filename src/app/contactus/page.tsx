@@ -68,7 +68,10 @@ const ContactPage = () => {
         </h2>
        
       </div> */}
-       <ContactForm />
+      <div id="contact-form">
+ <ContactForm />
+      </div>
+      
 
       {/* FAQ Section */}
       <div className="bg-white py-20 px-6 md:px-12">
