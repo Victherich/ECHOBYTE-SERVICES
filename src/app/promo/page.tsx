@@ -2,7 +2,7 @@
 
 
 import React from 'react';
-import { FaLaptopCode, FaShieldAlt, FaDatabase, FaCreditCard, FaStore, FaChartLine, FaCheckCircle, FaRocket } from 'react-icons/fa';
+import { FaLaptopCode, FaShieldAlt, FaDatabase, FaCreditCard, FaChartLine, FaCheckCircle, FaRocket } from 'react-icons/fa';
 import Link from 'next/link';
 import { FaWebAwesome } from 'react-icons/fa6';
 
@@ -55,7 +55,7 @@ const EmpowermentPromo= () => {
 
              {/* Terms & Conditions Inline Notice / Link */}
         <div className="text-center py-4 text-xs text-slate-500">
-          By enrolling or making a payment, you agree to EchoByte Concept's{' '}
+          By enrolling or making a payment, you agree to Our{' '}
           <Link 
             href="/promo-terms" /* Replace with your exact terms page route, e.g., /promo-terms */
             className="text-blue-600 font-semibold underline hover:text-purple-600 transition-colors"
@@ -198,7 +198,7 @@ const EmpowermentPromo= () => {
 
              {/* Terms & Conditions Inline Notice / Link */}
         <div className="text-center py-4 text-xs text-slate-500">
-          By enrolling or making a payment, you agree to EchoByte Concept's{' '}
+          By enrolling or making a payment, you agree to Our{' '}
           <Link 
             href="/promo-terms" /* Replace with your exact terms page route, e.g., /promo-terms */
             className="text-blue-600 font-semibold underline hover:text-purple-600 transition-colors"
