@@ -243,6 +243,7 @@ export default function Header() {
   const pathname = usePathname();
   const [isMounted, setIsMounted] = useState(false);
   const moreRef = useRef<HTMLDivElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null); // Add this line
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -256,6 +257,25 @@ export default function Header() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+
+  // Separate effect for closing the mobile menu on outside clicks
+  useEffect(() => {
+    const handleMobileClickOutside = (event: MouseEvent) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+
+    if (menuOpen) {
+      document.addEventListener('mousedown', handleMobileClickOutside);
+    }
+    
+    return () => {
+      document.removeEventListener('mousedown', handleMobileClickOutside);
+    };
+  }, [menuOpen]);
+  
 
   // Mark as mounted on the client
   useEffect(() => {
@@ -357,7 +377,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white/90 backdrop-blur-md border-t border-gray-100 shadow-lg absolute w-full left-0">
+        <div ref={mobileMenuRef} className="md:hidden bg-white/90 backdrop-blur-md border-t border-gray-100 shadow-lg absolute w-full left-0">
           <nav className="flex flex-col px-4 py-3">
             {mainNav.map((item) => (
               <Link
