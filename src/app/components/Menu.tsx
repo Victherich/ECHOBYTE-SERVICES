@@ -217,7 +217,7 @@ import { usePathname } from 'next/navigation';
 const mainNav = [
   { name: 'Home', href: '/' },
   { name: 'About Us', href: '/aboutus' },
-  // { name: 'Clients', href: '/ourclients' },
+  { name: 'Website Empowerment', href: '/promo' },
   { name: 'Contact Us', href: '/contactus' },
 ];
 
