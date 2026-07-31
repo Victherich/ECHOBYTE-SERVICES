@@ -122,11 +122,25 @@ const PromoTerms = () => {
             </p>
           </div>
 
+          {/* Payment Processing & Sub-Account Charges */}
+          <div className="space-y-2 border-b border-slate-100 pb-6">
+            <div className="flex items-center gap-2 font-bold text-slate-900 text-base">
+              <FaShieldAlt className="text-blue-600" />
+              <h2>7. Payment Processing & Sub-Account Fees</h2>
+            </div>
+            <p>
+              For all financial transactions processed through the website, standard transaction charges levied by the powering fintech and payment gateway infrastructure providers apply automatically.
+            </p>
+            <p className="mt-2">
+              Additionally, for clients who do not possess a direct, independently verified account with the integrated fintech or financial processing institutions, EchoByte Concept will provision and manage a managed sub-account on their behalf. Standard sub-account maintenance and routing charges apply to cover structural transaction processing and settlement management.
+            </p>
+          </div>
+
           {/* Section 5 */}
           <div className="space-y-2 border-b border-slate-100 pb-6">
             <div className="flex items-center gap-2 font-bold text-slate-900 text-base">
               <FaShieldAlt className="text-blue-600" />
-              <h2>7. Limitation of Liability</h2>
+              <h2>8. Limitation of Liability</h2>
             </div>
             <p>
               EchoByte Concept, its directors, developers, and affiliates shall not be held liable for any direct, indirect, incidental, or consequential damages—including loss of profits, data loss, business interruption, or server downtimes caused by third-party infrastructure failures—arising out of the use or inability to use the websites provided under this promotion.
@@ -137,7 +151,7 @@ const PromoTerms = () => {
           <div className="space-y-2">
             <div className="flex items-center gap-2 font-bold text-slate-900 text-base">
               <FaFileContract className="text-blue-600" />
-              <h2>8. Modification and Termination of Promo</h2>
+              <h2>10. Modification and Termination of Promo</h2>
             </div>
             <p>
               EchoByte Concept reserves the absolute right to modify, suspend, or terminate this promotional campaign, pricing model, or associated terms at any time without prior notice. 
@@ -148,7 +162,7 @@ const PromoTerms = () => {
 
         {/* Footer Action Card */}
         <div className="p-6 rounded-3xl bg-slate-900 text-white text-center shadow-xl space-y-3">
-          <h3 className="font-bold text-sm sm:text-base">Have questions regarding these terms?</h3>
+          <h3 className="font-bold text-sm sm:text-base">Have questions?</h3>
           <p className="text-xs text-slate-400 max-w-md mx-auto">
             Reach out to our support team for further questions.
           </p>
