@@ -48,7 +48,7 @@ const PromoContactForm= () => {
       
       {/* Promo Header & Details Banner */}
       <div className="w-full max-w-7xl mx-auto mb-6 text-center">
-        <span className="inline-block bg-blue-600 text-white text-xs sm:text-sm font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm mb-3">
+        <span className="inline-block text-black text-xs sm:text-sm font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm mb-3">
           🔥 Limited Time Promo Offer
         </span>
         <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3">
@@ -56,7 +56,7 @@ const PromoContactForm= () => {
         </h2>
         <p className="text-sm sm:text-base text-gray-700 max-w-3xl mx-auto leading-relaxed">
           Scale your business or personal brand online today. Reserve your promotional slot now by filling out the form below. 
-          <strong className="text-blue-700" style={{fontSize:"2rem"}}> No upfront payment required!</strong> You only get to pay after the first website is successfully delivered to you.
+          <strong className="text-blue-700" style={{fontSize:"1.5rem"}}> No payment until you receive your First Website!</strong> You only get to pay after the first website is successfully delivered to you.
         </p>
       </div>
 
@@ -117,7 +117,7 @@ const PromoContactForm= () => {
         {/* Right Side: Exact Reservation Form */}
         <div className="p-[10px] sm:p-6 rounded-2xl bg-white/80 backdrop-blur-md border border-white/60 shadow-xl">
           <div className="mb-4">
-            <h3 className="text-xl font-bold text-gray-900 mb-1">Reserve Your Promo Slot</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-1">Fill-in your details to Reserve Your Promo Slot</h3>
             <p className="text-xs text-gray-500">Submit your details below to lock in the ₦50,000 for 3 websites promo.</p>
           </div>
 
@@ -158,7 +158,7 @@ const PromoContactForm= () => {
               />
             </div>
 
-            <div className="mb-[10px]">
+            {/* <div className="mb-[10px]">
               <textarea
                 name="message"
                 placeholder="Briefly describe your FIRST website need. (e.g., business type, purpose, features)"
@@ -168,7 +168,7 @@ const PromoContactForm= () => {
                 required
                 className="w-full p-[10px] text-sm rounded-xl bg-white/90 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all shadow-sm resize-none"
               />
-            </div>
+            </div> */}
 
             <button
               type="submit"
