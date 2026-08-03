@@ -56,15 +56,15 @@ const PromoContactForm= () => {
         </h2>
         <p className="text-sm sm:text-base text-gray-700 max-w-3xl mx-auto leading-relaxed">
           Scale your business or personal brand online today. Reserve your promotional slot now by filling out the form below. 
-          <strong className="text-blue-700" style={{fontSize:"2rem"}}> No upfront payment required!</strong> You only get to pay <span className="underline decoration-purple-600 decoration-2">after</span> the first website is successfully delivered to you.
+          <strong className="text-blue-700" style={{fontSize:"2rem"}}> No upfront payment required!</strong> You only get to pay after the first website is successfully delivered to you.
         </p>
       </div>
 
       {/* Main Two-Column Layout */}
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[10px] items-start">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-1 gap-[10px] items-start">
         
         {/* Left Side: Promo Highlights & Value Elements */}
-        <div className="flex flex-col justify-between gap-[10px] p-2 sm:p-4">
+        {/* <div className="flex flex-col justify-between gap-[10px] p-2 sm:p-4">
           <div>
             <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-[10px]">
               Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Echobyte Concept?</span>
@@ -75,7 +75,7 @@ const PromoContactForm= () => {
           </div>
 
           <div className="space-y-[10px]">
-            <div className="p-[10px] rounded-xl bg-white/70 backdrop-blur-sm border border-white/80 shadow-sm flex items-center gap-[10px] hover:scale-[1.01] transition-all">
+            <div className="p-[10px] rounded-xl backdrop-blur-sm border border-white/80 shadow-sm flex items-center gap-[10px] hover:scale-[1.01] transition-all">
               <span className="text-blue-600 text-base">🛡️</span>
               <div>
                 <h4 className="text-xs sm:text-sm font-bold text-gray-900">Pay After Delivery Policy</h4>
@@ -83,7 +83,7 @@ const PromoContactForm= () => {
               </div>
             </div>
 
-            <div className="p-[10px] rounded-xl bg-white/70 backdrop-blur-sm border border-white/80 shadow-sm flex items-center gap-[10px] hover:scale-[1.01] transition-all">
+            <div className="p-[10px] rounded-xl  backdrop-blur-sm border border-white/80 shadow-sm flex items-center gap-[10px] hover:scale-[1.01] transition-all">
               <span className="text-purple-600 text-base">⚡</span>
               <div>
                 <h4 className="text-xs sm:text-sm font-bold text-gray-900">3 Complete Web Solutions</h4>
@@ -91,7 +91,7 @@ const PromoContactForm= () => {
               </div>
             </div>
 
-            <div className="p-[10px] rounded-xl bg-white/70 backdrop-blur-sm border border-white/80 shadow-sm flex items-center gap-[10px] hover:scale-[1.01] transition-all">
+            <div className="p-[10px] rounded-xl backdrop-blur-sm border border-white/80 shadow-sm flex items-center gap-[10px] hover:scale-[1.01] transition-all">
               <span className="text-blue-600 text-base">🚀</span>
               <div>
                 <h4 className="text-xs sm:text-sm font-bold text-gray-900">High-Performance & Mobile Responsive</h4>
@@ -100,21 +100,19 @@ const PromoContactForm= () => {
             </div>
           </div>
 
-          <div className="p-[10px] rounded-xl bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-200/50 text-blue-900 text-center text-xs font-semibold shadow-sm">
-            ✨ Reserve your slot now before slots run out!
-          </div>
+   
 
-               {/* Terms & Conditions Inline Notice / Link */}
+         
         <div className="text-center py-4 text-xs text-slate-500">
           By enrolling or making a payment, you agree to Our{' '}
           <Link 
-            href="/promo-terms" /* Replace with your exact terms page route, e.g., /promo-terms */
+            href="/promo-terms"
             className="text-blue-600 font-semibold underline hover:text-purple-600 transition-colors"
           >
             Promotional Terms & Conditions
           </Link>
         </div>
-        </div>
+        </div> */}
 
         {/* Right Side: Exact Reservation Form */}
         <div className="p-[10px] sm:p-6 rounded-2xl bg-white/80 backdrop-blur-md border border-white/60 shadow-xl">
