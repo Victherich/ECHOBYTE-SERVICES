@@ -7,7 +7,9 @@ import Link from 'next/link';
 import { FaWebAwesome } from 'react-icons/fa6';
 
 const EmpowermentPromo= () => {
-  const checkoutUrl = "https://paystack.shop/pay/kp2nhw19-8"; // Replace with your exact external payment or registration URL
+  // const checkoutUrl = "https://paystack.shop/pay/kp2nhw19-8"; 
+  
+   const checkoutUrl = "/promo-registration";// Replace with your exact external payment or registration URL
 
   return (
     <section className="w-full text-gray-900 px-[10px] py-[80px] font-sans" style={{ background: "#e4ecf3" }}>
@@ -46,7 +48,7 @@ const EmpowermentPromo= () => {
             Get 3 professionally built, high-end websites for just <strong className="text-gray-900 font-bold">₦50,000</strong>. Keep 100% of the profits when you resell them!
           </p>
 
-          <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="inline-block w-full sm:w-auto">
+          <a href={checkoutUrl} rel="noopener noreferrer" className="inline-block w-full sm:w-auto">
             <button className="w-full sm:w-auto px-6 py-3 text-sm bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-blue-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer flex items-center justify-center gap-2">
               <FaRocket />
               <span>Enroll & Secure Your 3 Slots Now</span>
@@ -90,8 +92,8 @@ const EmpowermentPromo= () => {
             <div className="p-[10px] rounded-xl bg-white/50 border border-white/80 flex flex-col justify-between">
               <div>
                 <span className="text-xl font-black text-blue-600 mb-2 block">01</span>
-                <h3 className="font-bold text-gray-900 text-sm mb-[6px]">Pay Once (₦50,000)</h3>
-                <p className="text-xs text-gray-600">Secure your package instantly with a one-time payment of ₦50,000 to lock in your slots.</p>
+                <h3 className="font-bold text-gray-900 text-sm mb-[6px]">Enroll and secure your slot</h3>
+                <p className="text-xs text-gray-600">Secure your 3 website package instantly by submitting your details. You only pay after the first website is delivered to you.</p>
               </div>
             </div>
 
@@ -189,10 +191,10 @@ const EmpowermentPromo= () => {
             This is a strict <span className="text-red-500 font-bold">limited-time empowerment offer</span>. Only a few reseller slots remain open for this batch. Secure your spots today before they fill up!
           </p>
 
-          <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="inline-block w-full sm:w-auto">
+          <a href={checkoutUrl} rel="noopener noreferrer" className="inline-block w-full sm:w-auto">
             <button className="w-full sm:w-auto px-8 py-3 text-sm bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-blue-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 mx-auto">
               <FaCheckCircle />
-              <span>Make Payment & Claim Your 3 Websites</span>
+              <span>Enroll & Claim Your 3 Websites</span>
             </button>
           </a>
 

@@ -58,7 +58,8 @@ const PromoTerms = () => {
               <h2>2. Payment, Finality & Non-Refundability</h2>
             </div>
             <p>
-              All payments made for the ₦50,000 empowerment promo are <strong className="text-slate-900">strictly non-refundable</strong> under any circumstances. Once payment is processed and verified, your participant slot is locked in. EchoByte Concept maintains a strict zero-refund policy to protect resource allocation and structural delivery commitments.
+              Enrollment in the promo is now free of charge; however you will be required to pay the ₦50,000 promotional fee only after the first website is successfully delivered to you. This payment is a one-time fee that secures your participant slot and access to the three (3) website builds only.
+EchoByte Concept maintains a strict zero-refund policy to protect resource allocation and structural delivery commitments.
             </p>
           </div>
 
