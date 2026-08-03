@@ -4,7 +4,7 @@ import React from 'react';
 import { FaShieldAlt, FaExclamationTriangle, FaHandshake, FaLock, FaFileContract, FaArrowLeft } from 'react-icons/fa';
 
 const PromoTerms = () => {
-  const returnUrl = "/promo"; // Link back to your main promo or home page
+  const returnUrl = "/promo-registration"; // Link back to your main promo or home page
 
   return (
     <section className="w-full bg-slate-100 text-slate-900 py-20 px-4 sm:px-6 lg:px-8 font-sans min-h-screen">
