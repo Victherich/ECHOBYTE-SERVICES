@@ -25,16 +25,16 @@ export default function LandingPage() {
   return (
     <div className="bg-white text-white min-h-screen font-sans">
       <HeroSection/>
-      <PromoBannerCard/>
-      <ServicesSection/>
+      {/* <PromoBannerCard/> */}
+      {/* <ServicesSection/> */}
      
-      <WhyChooseSection/>
+      {/* <WhyChooseSection/> */}
 
-      <Testimonials/>
-<TrustSection/>
+      {/* <Testimonials/> */}
+{/* <TrustSection/> */}
 
-<ProjectsMilestoneBadge/>
-<ContactForm/>
+{/* <ProjectsMilestoneBadge/> */}
+{/* <ContactForm/> */}
 
  {/* <h2 className="text-3xl sm:text-3xl font-bold text-center text-white mb-4" onClick={()=>router.push('/ourclients')}>
           Meet our <span className="text-yellow-400">Clients...</span>
