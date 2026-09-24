@@ -1,13 +1,13 @@
 'use client';
 
-import TrustSection from "./components/TrustSection";
+// import TrustSection from "./components/TrustSection";
 import HeroSection from "./components/HeroSection";
-import ServicesSection from "./components/ServicesSection";
-import WhyChooseSection from "./components/WhyChooseSection";
-import ContactForm from "./components/ContactForm";
-import Testimonials from "./components/Testimonials";
-import ProjectsMilestoneBadge from "./components/ProjectsMilestoneBadge";
-import PromoBannerCard from "./components/PromoBannerCard";
+// import ServicesSection from "./components/ServicesSection";
+// import WhyChooseSection from "./components/WhyChooseSection";
+// import ContactForm from "./components/ContactForm";
+// import Testimonials from "./components/Testimonials";
+// import ProjectsMilestoneBadge from "./components/ProjectsMilestoneBadge";
+// import PromoBannerCard from "./components/PromoBannerCard";
 // import { useRouter } from "next/router";
 
 

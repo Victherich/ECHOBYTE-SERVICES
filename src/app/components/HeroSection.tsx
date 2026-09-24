@@ -90,7 +90,7 @@
 
 
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const HeroSection = () => {
   // A function to handle smooth scrolling to the services section.
