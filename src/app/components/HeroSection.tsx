@@ -89,8 +89,140 @@
 
 
 
+// import React from 'react';
+
+
+// const HeroSection = () => {
+//   // A function to handle smooth scrolling to the services section.
+//   const scrollToServices = () => {
+//     const servicesSection = document.getElementById("services");
+//     if (servicesSection) {
+//       servicesSection.scrollIntoView({ behavior: "smooth" });
+//     }
+//   };
+
+//   // Define your 6 platforms here
+//   const platforms = [
+//     { name: "Build Your Websites", description: "Click & get your Websites built", url: "#", icon: "🌐" },
+//     { name: "Build Your Mobile Apps", description: "Click & get your mobile apps built", url: "#", icon: "📱" },
+//     { name: "Build Your Personal Portfolio", description: "Click & build your porfolio with our powerful portfolio builder", url: "#", icon: "🤖" },
+//     { name: "Sell Digital Products", description: "Click & get your digital store to sell digital products & services", url: "#", icon: "⚡" },
+//     { name: "Acquire Digital Skills", description: "Clikc & learn money-making skills", url: "#", icon: "🎨" },
+//     { name: "Get Remote jobs", description: "Click & find your remote jobs", url: "#", icon: "🚀" },
+//   ];
+
+//   return (
+//     // The main section container. It's relative so we can place an overlay inside.
+//     <section className="relative min-h-screen flex items-center justify-center text-white p-4 sm:p-8">
+//       {/* Background Image Container with Overlay */}
+//       <div 
+//         className="absolute inset-0 z-0 bg-cover bg-top"
+//         style={{
+//           backgroundImage: "url('/h3.png')",
+//           backgroundColor: 'rgba(0, 0, 0, 0.7)',
+//           backgroundBlendMode: 'multiply'
+//         }}
+//       />
+      
+//       {/* Main content, placed above the background image layer. */}
+//       <div className="relative z-10 text-center max-w-5xl mx-auto py-12">
+
+      
+
+//           <p
+//           className="text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto"
+//           style={{ textShadow: '2px 2px 5px rgb(0, 0, 0)' }}
+//         >
+//           WELCOME TO
+//         </p>
+
+//         {/* Heading */}
+//         <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-[10px]">
+//           <span 
+//             className="text-white inline-block" 
+//             style={{ textShadow: '0 4px 12px rgba(0, 0, 0, 0.9), 0 2px 4px rgba(0, 0, 0, 0.8)' }}
+//           >
+//             ECHOBYTE
+//           </span>{' '}
+//           <span
+//             style={{ WebkitTextStroke: '1px white' }}
+//             className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600"
+//           >
+//             CONCEPT
+//           </span>
+//         </h1>
+        
+//         {/* Subheading text */}
+//         <p
+//           className="text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto mb-10"
+//           style={{ textShadow: '2px 2px 5px rgb(0, 0, 0)' }}
+//         >
+// YOUR ALL IN ONE DIGITAL SOLUTIONS
+//         </p>
+
+//         {/* Big Platforms Grid / Buttons */}
+//         <div className="w-full max-w-4xl mx-auto">
+//           <p className="text-xs uppercase tracking-widest text-white-400 font-bold mb-4">
+//             Explore Our Services and Platforms
+//           </p>
+          
+//           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+//             {platforms.map((platform, index) => (
+//               <a
+//                 key={index}
+//                 href={platform.url}
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="group relative flex flex-col items-start p-5 rounded-2xl bg-neutral-900/60 backdrop-blur-md border border-white/10 hover:border-blue-500/50 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-1.5 transition-all duration-300 text-left cursor-pointer"
+//               >
+//                 <div className="flex items-center justify-between w-full mb-3">
+//                   <span className="text-3xl p-2 rounded-xl bg-white/5 border border-white/10 group-hover:scale-110 transition-transform duration-300">
+//                     {platform.icon}
+//                   </span>
+//                   <span className="text-white/40 group-hover:text-white transition-colors duration-300 font-semibold text-lg">
+//                     ↗
+//                   </span>
+//                 </div>
+//                 <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+//                   {platform.name}
+//                 </h3>
+//                 <p className="text-xs text-gray-400 mt-1">
+//                   {platform.description}
+//                 </p>
+//               </a>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* Optional Secondary Action (Explore Services Scroll) */}
+//         <div className="mt-10 flex justify-center">
+//           <button
+//             onClick={scrollToServices}
+//             className="text-xs sm:text-sm text-gray-400 hover:text-white underline underline-offset-4 transition-colors cursor-pointer"
+//           >
+//             learn more about Echobyte Concept
+//           </button>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default HeroSection;
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React from 'react';
-// import Image from 'next/image';
 
 const HeroSection = () => {
   // A function to handle smooth scrolling to the services section.
@@ -101,14 +233,14 @@ const HeroSection = () => {
     }
   };
 
-  // Define your 6 platforms here
+  // Define your 6 platform buttons with short, punchy button text
   const platforms = [
-    { name: "Build Your Websites", description: "Click & get your Websites built", url: "#", icon: "🌐" },
-    { name: "Build Your Mobile Apps", description: "Click & get your mobile apps built", url: "#", icon: "📱" },
-    { name: "Build Your Personal Portfolio", description: "Click & build your porfolio with our powerful portfolio builder", url: "#", icon: "🤖" },
-    { name: "Sell Digital Products", description: "Click & get your digital store to sell digital products & services", url: "#", icon: "⚡" },
-    { name: "Acquire Digital Skills", description: "Clikc & learn money-making skills", url: "#", icon: "🎨" },
-    { name: "Get Remote jobs", description: "Click & find your remote jobs", url: "#", icon: "🚀" },
+    { name: "Click to Build Your Websites", url: "#" },
+    { name: "Click to Build Your Mobile Apps", url: "#" },
+    { name: "Click to Build Your Portfolio", url: "#" },
+    { name: "Click to Sell Digital Products", url: "#" },
+    { name: "Click to Acquire Digital Skills", url: "#" },
+    { name: "Click to Get Remote Jobs", url: "#" },
   ];
 
   return (
@@ -126,18 +258,8 @@ const HeroSection = () => {
       
       {/* Main content, placed above the background image layer. */}
       <div className="relative z-10 text-center max-w-5xl mx-auto py-12">
-        {/* Logo */}
-        {/* <div className="relative mx-auto mb-6 w-24 h-24 sm:w-30 sm:h-30">
-          <Image
-            src="/logo.jpeg"
-            alt="Echobyte Logo"
-            fill
-            priority
-            className="object-contain rounded-full drop-shadow-xl"
-          />
-        </div> */}
-
-          <p
+        <br/>
+        <p
           className="text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto"
           style={{ textShadow: '2px 2px 5px rgb(0, 0, 0)' }}
         >
@@ -165,48 +287,54 @@ const HeroSection = () => {
           className="text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto mb-10"
           style={{ textShadow: '2px 2px 5px rgb(0, 0, 0)' }}
         >
-YOUR ALL IN ONE DIGITAL SOLUTIONS
+          YOUR ALL IN ONE DIGITAL SOLUTIONS
         </p>
 
-        {/* Big Platforms Grid / Buttons */}
+        {/* Big Platforms Grid / 3D Buttons */}
         <div className="w-full max-w-4xl mx-auto">
-          <p className="text-xs uppercase tracking-widest text-white-400 font-bold mb-4">
+          <p className="text-xl uppercase tracking-widest text-gray-300 font-bold mb-6">
             Explore Our Services and Platforms
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {platforms.map((platform, index) => (
-              <a
+              <button
                 key={index}
-                href={platform.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative flex flex-col items-start p-5 rounded-2xl bg-neutral-900/60 backdrop-blur-md border border-white/10 hover:border-blue-500/50 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-1.5 transition-all duration-300 text-left cursor-pointer"
+                onClick={() => {
+                  if (platform.url !== "#") {
+                    window.open(platform.url, "_blank", "noopener,noreferrer");
+                  }
+                }}
+                className="group relative flex items-center justify-between w-full px-6 py-5 rounded-2xl 
+                           bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700
+                           border-t border-white/30 border-b border-black/40
+                           shadow-[0_8px_0_#1e1b4b,0_15px_20px_rgba(0,0,0,0.5)]
+                           hover:shadow-[0_4px_0_#1e1b4b,0_10px_15px_rgba(0,0,0,0.4)]
+                           hover:translate-y-1
+                           active:shadow-[0_0px_0_#1e1b4b,0_2px_5px_rgba(0,0,0,0.4)]
+                           active:translate-y-2
+                           transition-all duration-150 ease-in-out text-left cursor-pointer overflow-hidden"
               >
-                <div className="flex items-center justify-between w-full mb-3">
-                  <span className="text-3xl p-2 rounded-xl bg-white/5 border border-white/10 group-hover:scale-110 transition-transform duration-300">
-                    {platform.icon}
-                  </span>
-                  <span className="text-white/40 group-hover:text-white transition-colors duration-300 font-semibold text-lg">
-                    ↗
-                  </span>
-                </div>
-                <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+                {/* Glossy top sheen effect for 3D look */}
+                <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/25 to-transparent pointer-events-none rounded-t-2xl" />
+
+                <span className="relative z-10 text-base sm:text-lg font-bold text-white tracking-wide drop-shadow-sm">
                   {platform.name}
-                </h3>
-                <p className="text-xs text-gray-400 mt-1">
-                  {platform.description}
-                </p>
-              </a>
+                </span>
+
+                <span className="relative z-10 text-white/80 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 font-bold text-xl ml-2">
+                  ↗
+                </span>
+              </button>
             ))}
           </div>
         </div>
 
         {/* Optional Secondary Action (Explore Services Scroll) */}
-        <div className="mt-10 flex justify-center">
+        <div className="mt-12 flex justify-center">
           <button
             onClick={scrollToServices}
-            className="text-xs sm:text-sm text-gray-400 hover:text-white underline underline-offset-4 transition-colors cursor-pointer"
+            className="text-xs sm:text-sm text-gray-300 hover:text-white underline underline-offset-4 transition-colors cursor-pointer"
           >
             learn more about Echobyte Concept
           </button>
