@@ -111,21 +111,21 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import React from 'react';
 
-const quickLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/aboutus' },
-  { name: 'Web Services', href: '/services' },
-  { name: 'Mobile Services', href: '/mobileservices' },
-  { name: 'Digital Store', href: 'https://courses.echobyteconcept.com' },
-  { name: 'Portfolio Builder', href: '/comingsoon' },
-  { name: 'Website / ECommerce Builder', href: '/comingsoon' },
-  { name: 'Affiliate', href: '/comingsoon' },
-  { name: 'Partnership', href: '/comingsoon' },
-  { name: 'Contact Us', href: '/contactus' },
-];
+// const quickLinks = [
+//   { name: 'Home', href: '/' },
+//   { name: 'About Us', href: '/aboutus' },
+//   { name: 'Web Services', href: '/services' },
+//   { name: 'Mobile Services', href: '/mobileservices' },
+//   { name: 'Digital Store', href: 'https://courses.echobyteconcept.com' },
+//   { name: 'Portfolio Builder', href: '/comingsoon' },
+//   { name: 'Website / ECommerce Builder', href: '/comingsoon' },
+//   { name: 'Affiliate', href: '/comingsoon' },
+//   { name: 'Partnership', href: '/comingsoon' },
+//   { name: 'Contact Us', href: '/contactus' },
+// ];
 
 const Footer: React.FC = () => {
   return (
