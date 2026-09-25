@@ -235,8 +235,8 @@ const HeroSection = () => {
 
   // Define your 6 platform buttons with short, punchy button text
   const platforms = [
-    { name: "Click to Build Your Websites", url: "#" },
-    { name: "Click to Build Your Mobile Apps", url: "#" },
+    // { name: "Click to Build Your Websites", url: "#" },
+    // { name: "Click to Build Your Mobile Apps", url: "#" },
     { name: "Click to Build Your Portfolio", url: "#" },
     { name: "Click to Sell Digital Products", url: "#" },
     { name: "Click to Acquire Digital Skills", url: "#" },

@@ -155,7 +155,7 @@ export default function RootLayout({
             href="https://wa.me/2347063480314"
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-[1%] right-1 w-16 h-16 rounded-full shadow-lg cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
+            className="fixed bottom-[1%] right-1 w-16 h-16 rounded-full shadow-lg cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 z-50"
           >
             <Image
               src={wp}
@@ -163,6 +163,7 @@ export default function RootLayout({
               width={50}
               height={50}
               className="rounded-full"
+              
             />
           </Link>
         </StyledComponentsRegistry>

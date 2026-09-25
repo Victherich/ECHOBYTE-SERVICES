@@ -173,7 +173,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links List (Compact grid) */}
-          <div>
+          {/* <div>
             <h4 className="text-gray-900 font-bold text-xs uppercase tracking-wider mb-[10px]">Quick Links</h4>
             <ul className="grid grid-cols-2 gap-x-[10px] gap-y-[6px] text-xs">
               {quickLinks.map((link) => (
@@ -188,7 +188,7 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Details */}
           <div>
