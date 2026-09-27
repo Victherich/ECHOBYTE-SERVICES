@@ -222,9 +222,11 @@
 
 
 
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const HeroSection = () => {
+  const router = useRouter();
   // A function to handle smooth scrolling to the services section.
   const scrollToServices = () => {
     const servicesSection = document.getElementById("services");
@@ -333,7 +335,7 @@ const HeroSection = () => {
         {/* Optional Secondary Action (Explore Services Scroll) */}
         <div className="mt-12 flex justify-center">
           <button
-            onClick={scrollToServices}
+            onClick={()=>router.push('/aboutus')}
             className="text-xs sm:text-sm text-gray-300 hover:text-white underline underline-offset-4 transition-colors cursor-pointer"
           >
             learn more about Echobyte Concept
