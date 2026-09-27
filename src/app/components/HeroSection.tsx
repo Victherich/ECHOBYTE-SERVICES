@@ -237,10 +237,10 @@ const HeroSection = () => {
   const platforms = [
     // { name: "Click to Build Your Websites", url: "#" },
     // { name: "Click to Build Your Mobile Apps", url: "#" },
-    { name: "Click to Build Your Portfolio", url: "#" },
-    { name: "Click to Sell Digital Products", url: "#" },
-    { name: "Click to Acquire Digital Skills", url: "#" },
-    { name: "Click to Get Remote Jobs", url: "#" },
+    { name: "Click to Build Your Portfolio", url: "https://myportfolioechobyte.vercel.app/" },
+    { name: "Click to Sell Digital Products", url: "https://echobytedigital.vercel.app/" },
+    { name: "Click to Learn Digital Skills", url: "https://echobytedigitalstore.vercel.app/" },
+        // { name: "Click to Build Your Website & Apps", url: "#" },
   ];
 
   return (
