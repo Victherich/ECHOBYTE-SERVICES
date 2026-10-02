@@ -111,21 +111,20 @@
 'use client';
 
 import Image from 'next/image';
-// import Link from 'next/link';
+import Link from 'next/link';
 import React from 'react';
 
-// const quickLinks = [
-//   { name: 'Home', href: '/' },
-//   { name: 'About Us', href: '/aboutus' },
-//   { name: 'Web Services', href: '/services' },
-//   { name: 'Mobile Services', href: '/mobileservices' },
-//   { name: 'Digital Store', href: 'https://courses.echobyteconcept.com' },
-//   { name: 'Portfolio Builder', href: '/comingsoon' },
-//   { name: 'Website / ECommerce Builder', href: '/comingsoon' },
-//   { name: 'Affiliate', href: '/comingsoon' },
-//   { name: 'Partnership', href: '/comingsoon' },
-//   { name: 'Contact Us', href: '/contactus' },
-// ];
+const quickLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Promo', href: '/promo' },
+  { name: 'Web Services', href: '/webservices' },
+  { name: 'Mobile Services', href: '/mobileservices' },
+  { name: 'Learn Skills', href: 'https://echobytedigitalstore.vercel.app' },
+  { name: 'Build your Portfolio', href: 'https://myportfolioechobyte.vercel.app'  },
+    { name: 'Sell Digital Products & Services', href: 'https://echobytedigital.vercel.app'  },
+  { name: 'Contact', href: '/contact' },
+];
 
 const Footer: React.FC = () => {
   return (
@@ -173,7 +172,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links List (Compact grid) */}
-          {/* <div>
+          <div>
             <h4 className="text-gray-900 font-bold text-xs uppercase tracking-wider mb-[10px]">Quick Links</h4>
             <ul className="grid grid-cols-2 gap-x-[10px] gap-y-[6px] text-xs">
               {quickLinks.map((link) => (
@@ -188,15 +187,15 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div> */}
+          </div>
 
           {/* Contact Details */}
           <div>
-            <h4 className="text-gray-900 font-bold text-xs uppercase tracking-wider mb-[10px]">Get in Touch</h4>
+            <h4 className="text-gray-900 font-bold text-xs uppercase tracking-wider mb-[10px]">CONTACT US</h4>
             <ul className="text-xs text-gray-600 space-y-[6px] font-medium mb-[10px]">
               <li>📞 +234 706 348 0314</li>
               <li>📧 echobyteconcept@gmail.com</li>
-              <li>🌐 echobyteconcept.com</li>
+              {/* <li>🌐 echobyteconcept.com</li> */}
             </ul>
             <div className="p-[10px] rounded-lg bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-200/150 text-[11px] text-gray-700 bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 font-semibold">
               ✨ Innovation & Excellence Combined

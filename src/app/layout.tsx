@@ -95,7 +95,7 @@ import "./globals.css";
 import wp from "../assets/whatsapplogo.png";
 import CompanyCertificate from "./components/CompanyCertificate";
 import Footer from "./components/Footer";
-import Menu from "./components/Menu";
+import Menu from "./components/Header";
 import Image from "next/image";
 
 import Link from "next/link";

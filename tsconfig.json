@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/deleteproductimage"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/deleteproductimage", "src/app/components/HeroSection.jsx", "src/app/about/page.jsx", "src/app/promo/page.jsx", "src/app/components/ContactForm.jsx", "src/app/webservices/page.jsx", "src/app/components/Header.jsx", "src/app/mobileservices/page.jsx"],
   "exclude": ["node_modules"]
 }
